@@ -26,7 +26,7 @@ public class HomeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Add Tab Layout
+        //Add Tab Layouta
         mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
         //Add Tab Icon
