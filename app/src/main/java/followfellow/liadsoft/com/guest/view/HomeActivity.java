@@ -1,4 +1,4 @@
-package followfellow.liadsoft.com.ui;
+package followfellow.liadsoft.com.guest.view;
 
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
@@ -9,7 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.data.TabData;
+import followfellow.liadsoft.com.guest.control.OnTabSelectedListener;
+import followfellow.liadsoft.com.guest.control.adapter.ViewPagerAdapter;
+import followfellow.liadsoft.com.guest.model.TabData;
 
 
 public class HomeActivity extends ActionBarActivity {

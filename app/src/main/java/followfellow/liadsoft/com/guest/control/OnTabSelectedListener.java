@@ -1,4 +1,4 @@
-package followfellow.liadsoft.com.ui;
+package followfellow.liadsoft.com.guest.control;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;

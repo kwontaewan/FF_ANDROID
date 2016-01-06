@@ -1,15 +1,15 @@
-package followfellow.liadsoft.com.ui;
+package followfellow.liadsoft.com.guest.control.adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.ui.fragment.CartFragment;
-import followfellow.liadsoft.com.ui.fragment.MainFragment;
-import followfellow.liadsoft.com.ui.fragment.MessageFragment;
-import followfellow.liadsoft.com.ui.fragment.OptionFragment;
-import followfellow.liadsoft.com.ui.fragment.SearchFragment;
+import followfellow.liadsoft.com.guest.view.fragment.CartFragment;
+import followfellow.liadsoft.com.guest.view.fragment.MainFragment;
+import followfellow.liadsoft.com.guest.view.fragment.MessageFragment;
+import followfellow.liadsoft.com.guest.view.fragment.OptionFragment;
+import followfellow.liadsoft.com.guest.view.fragment.SearchFragment;
 
 
 /**
