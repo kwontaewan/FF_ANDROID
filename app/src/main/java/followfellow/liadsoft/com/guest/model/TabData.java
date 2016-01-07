@@ -20,7 +20,6 @@ public class TabData {
         arrayList.add(context.getString(R.string.category2));
         arrayList.add(context.getString(R.string.category3));
         arrayList.add(context.getString(R.string.category4));
-        arrayList.add(context.getString(R.string.category5));
         return arrayList;
     }
     //Tab Icon
@@ -33,7 +32,6 @@ public class TabData {
         arrayList.add(ImageUtil.resToDrawable(context, R.drawable.tab_icon_search,x_size,y_size));
         arrayList.add(ImageUtil.resToDrawable(context, R.drawable.tab_icon_message,x_size,y_size));
         arrayList.add(ImageUtil.resToDrawable(context, R.drawable.tab_icon_cart,x_size,y_size));
-        arrayList.add(ImageUtil.resToDrawable(context, R.drawable.tab_icon_option,x_size,y_size));
         return arrayList;
     }
 }
