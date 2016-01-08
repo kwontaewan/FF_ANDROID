@@ -16,13 +16,11 @@ import followfellow.liadsoft.com.guest.control.holder.HomeItemHolder;
  */
 public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeItemHolder> {
     private Context context;
-    private ArrayList<Integer> itemList = new ArrayList<Integer>();
+    private ArrayList<Integer> itemList;
 
-    public HomeRecyclerViewAdapter(Context context) {
+    public HomeRecyclerViewAdapter(Context context,ArrayList<Integer> itemList) {
         this.context = context;
-        this.itemList.add(R.drawable.tab_icon_main);
-        this.itemList.add(R.drawable.tab_icon_main);
-        this.itemList.add(R.drawable.tab_icon_main);
+        this.itemList = itemList;
     }
 
     @Override
