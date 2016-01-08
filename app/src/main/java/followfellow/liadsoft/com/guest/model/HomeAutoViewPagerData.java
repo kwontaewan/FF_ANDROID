@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import followfellow.liadsoft.com.R;
 
 /**
- * Created by user on 2016-01-08.
+ * Created by Gunter on 2016-01-08.
  */
 public class HomeAutoViewPagerData {
    public static ArrayList<Integer> getAllPagerItem(){

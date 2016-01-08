@@ -12,7 +12,7 @@ import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.holder.HomeItemHolder;
 
 /**
- * Created by user on 2016-01-07.
+ * Created by Gunter on 2016-01-07.
  */
 public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeItemHolder> {
     private Context context;
