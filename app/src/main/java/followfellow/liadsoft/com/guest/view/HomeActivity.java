@@ -1,15 +1,19 @@
 package followfellow.liadsoft.com.guest.view;
 
-import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import followfellow.liadsoft.com.R;
+import followfellow.liadsoft.com.guest.control.BarDrawerToggle;
+import followfellow.liadsoft.com.guest.control.OnNavigationItemSelectedListener;
 import followfellow.liadsoft.com.guest.control.OnTabSelectedListener;
 import followfellow.liadsoft.com.guest.control.adapter.ViewPagerAdapter;
 import followfellow.liadsoft.com.guest.model.TabData;
@@ -24,21 +28,48 @@ public class HomeActivity extends ActionBarActivity {
     //Tab Layout Variables
     private TabLayout mTabLayout;
 
+    //Toolbar Variables
+    private Toolbar toolbar;
+
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle drawerToggle;
+    NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //ToolBar
-        Toolbar toolbar = (Toolbar)findViewById(R.id.followfellow_toolbar);
+        //Initialising toolBar
+        toolbar = (Toolbar)findViewById(R.id.followfellow_toolbar);
+        //Setting toolbar as Actionbar.
         setSupportActionBar(toolbar);
-        //Add Tab Layouta
+        //Initialising NavigationView
+        navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        //Initialising DrawerLayout.
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //Setting OnNavigationItemSelectedListener to the Navigation View.
+        //This is used to perform specific action when an item is clicked.
+        navigationView.setNavigationItemSelectedListener(new OnNavigationItemSelectedListener(drawerLayout));
+
+        //Initialising ActionBarDrawerToggle and overriding its methods
+        drawerToggle = new BarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer);
+
+        //Finally setting up the drawer listener for DrawerLayout
+        drawerLayout.setDrawerListener(drawerToggle);
+
+        //Sync State of the navigation icon on the toolbar
+        // with the drawer when the drawer is opened or closed.
+        drawerToggle.syncState();
+
+
+        //Add Tab Layout
         mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
         //Add Tab Icon
-        for(Drawable tabImage : TabData.getDrawableAll(getBaseContext()))
+        for(String tabText : TabData.getStringAll(getBaseContext()))
         {
-            mTabLayout.addTab(mTabLayout.newTab().setIcon(tabImage));
-        }
+            mTabLayout.addTab(mTabLayout.newTab().setText(tabText));
+       }
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //Fragment Adapter
