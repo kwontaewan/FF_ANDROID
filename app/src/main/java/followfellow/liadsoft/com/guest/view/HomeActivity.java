@@ -65,7 +65,7 @@ public class HomeActivity extends ActionBarActivity {
         //Add Tab Layout
         mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
-        //Add Tab Icon
+        //Add Tab Icon/
         for(String tabText : TabData.getStringAll(getBaseContext()))
         {
             mTabLayout.addTab(mTabLayout.newTab().setText(tabText));
