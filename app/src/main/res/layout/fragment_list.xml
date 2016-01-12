@@ -14,39 +14,19 @@
             android:background="@color/primary">
 
             <ImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/add"
-                android:scaleType="fitXY"/>
+                style="@style/FilterImageView"
+                />
             <ImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/add"
-                android:scaleType="fitXY"/>
+                style="@style/FilterImageView"
+                />
             <ImageView
                 android:id="@+id/imgTest2"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/add"
-                android:scaleType="fitXY"/>
+                style="@style/FilterImageView"
+                />
             <ImageView
                 android:id="@+id/imgTest"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/add"
-                android:scaleType="fitXY"/>
+                style="@style/FilterImageView"
+                />
         </LinearLayout>
 
         <include
