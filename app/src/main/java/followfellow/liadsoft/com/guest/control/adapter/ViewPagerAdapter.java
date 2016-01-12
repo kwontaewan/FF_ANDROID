@@ -5,11 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.guest.view.fragment.CartFragment;
+import followfellow.liadsoft.com.guest.view.fragment.LikesFragment;
+import followfellow.liadsoft.com.guest.view.fragment.ListFragment;
 import followfellow.liadsoft.com.guest.view.fragment.MainFragment;
 import followfellow.liadsoft.com.guest.view.fragment.MessageFragment;
-import followfellow.liadsoft.com.guest.view.fragment.OptionFragment;
-import followfellow.liadsoft.com.guest.view.fragment.SearchFragment;
 
 
 /**
@@ -32,17 +31,14 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 Fragment mainFragment = new MainFragment();
                 return mainFragment;
             case 1:
-                Fragment searchFragment = new SearchFragment();
+                Fragment searchFragment = new ListFragment();
                 return searchFragment;
             case 2:
                 Fragment messageFragment = new MessageFragment();
                 return messageFragment;
             case 3:
-                Fragment cartFragment = new CartFragment();
-                return cartFragment;
-            case 4:
-                Fragment optionFragment = new OptionFragment();
-                return optionFragment;
+                Fragment likesFragment = new LikesFragment();
+                return likesFragment;
             default:
                 return null;
         }

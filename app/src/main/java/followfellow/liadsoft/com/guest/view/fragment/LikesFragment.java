@@ -11,13 +11,13 @@ import followfellow.liadsoft.com.R;
 /**
  * Created by Fwang on 2015. 10. 31..
  */
-public class OptionFragment extends Fragment {
+public class LikesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(
-                R.layout.fragment_option, container, false);
+                R.layout.fragment_likes, container, false);
         return rootView;
     }
 

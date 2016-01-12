@@ -8,8 +8,9 @@ import followfellow.liadsoft.com.R;
 
 
 /**
- * Created by user on 2016-01-11.
+ * Created by Gunter on 2016-01-11.
  */
+//네이비게이션바 아이템리스트 이벤트처리 클래스
 public class OnNavigationItemSelectedListener implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
 

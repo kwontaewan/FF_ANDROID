@@ -9,13 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
+import com.viewpagerindicator.LinePageIndicator;
 
 import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.adapter.HomeAutoViewPagerAdapter;
 import followfellow.liadsoft.com.guest.control.adapter.HomeRecyclerViewAdapter;
 import followfellow.liadsoft.com.guest.model.HomeAutoViewPagerData;
-import followfellow.liadsoft.com.guest.model.HomeRecyclerViewItemData;
+import followfellow.liadsoft.com.guest.model.RecyclerViewItemData;
 
 /**
  * Created by Fwang on 2015. 10. 31..
@@ -26,6 +27,7 @@ public class MainFragment extends Fragment {
     private HomeRecyclerViewAdapter homeRecyclerViewAdapter;
     private RecyclerViewHeader header;
     private HomeAutoViewPagerAdapter homeAutoViewPagerAdapter;
+    private LinePageIndicator linePageIndicator;
     AutoScrollViewPager viewPager;
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -36,8 +38,10 @@ public class MainFragment extends Fragment {
         homeRecyclerView = (RecyclerView)rootView.findViewById(R.id.home_recycler_view);
         header=(RecyclerViewHeader)rootView.findViewById(R.id.header);
         viewPager = (AutoScrollViewPager)rootView.findViewById(R.id.autoViewPager);
+        linePageIndicator = (LinePageIndicator)rootView.findViewById(R.id.pageIndicator);
         initAutoViewPager();
         initRecycleView();
+        linePageIndicator.setViewPager(viewPager);
         return rootView;
     }
     private void initAutoViewPager(){
@@ -50,9 +54,21 @@ public class MainFragment extends Fragment {
     private void initRecycleView(){
         listLayoutManger = new LinearLayoutManager(getActivity().getBaseContext());
         homeRecyclerView.setLayoutManager(listLayoutManger);
-        homeRecyclerViewAdapter = new HomeRecyclerViewAdapter(getActivity().getBaseContext(), HomeRecyclerViewItemData.getAllHomeItemList());
+        homeRecyclerViewAdapter = new HomeRecyclerViewAdapter(getActivity().getBaseContext(), RecyclerViewItemData.getAllHomeItemList());
         homeRecyclerView.setAdapter(homeRecyclerViewAdapter);
         header.attachTo(homeRecyclerView,true);
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        //stop auto scroll when onPause
+        viewPager.stopAutoScroll();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        //start auto scroll when onResume
+        viewPager.startAutoScroll();
+    }
 }

@@ -4,21 +4,18 @@
     <group android:checkableBehavior="single">
         <item android:id="@+id/list_item_1"
               android:title="@string/list_item_1"
-            android:icon="@drawable/tab_icon_main"/>
+              android:icon="@drawable/ic_action_inbox"/>
         <item android:id="@+id/list_item_2"
               android:title="@string/list_item_2"
-              android:icon="@drawable/tab_icon_main"/>
+              android:icon="@drawable/ic_action_favorite"/>
         <item android:id="@+id/list_item_3"
               android:title="@string/list_item_3"
-              android:icon="@drawable/tab_icon_main"/>
+              android:icon="@drawable/ic_action_read"/>
         <item android:id="@+id/list_item_4"
               android:title="@string/list_item_4"
-              android:icon="@drawable/tab_icon_main"/>
+              android:icon="@drawable/ic_action_help"/>
         <item android:id="@+id/list_item_5"
               android:title="@string/list_item_5"
-              android:icon="@drawable/tab_icon_main"/>
-        <item android:id="@+id/list_item_6"
-              android:title="@string/list_item_6"
-              android:icon="@drawable/tab_icon_main"/>
+              android:icon="@drawable/ic_action_setting"/>
     </group>
 </menu>

@@ -8,15 +8,14 @@ import android.widget.ImageView;
 import followfellow.liadsoft.com.R;
 
 /**
- * Created by Gunter on 2016-01-07.
+ * Created by user on 2016-01-12.
  */
-//RecyclerView listitem
-public class HomeItemHolder extends RecyclerView.ViewHolder {
+public class ListItemHolder extends RecyclerView.ViewHolder {
     public ImageView imageView;
-    private final Context context;
-    public HomeItemHolder(View itemView){
+    public Context context;
+    public ListItemHolder(View itemView) {
         super(itemView);
         context = itemView.getContext();
-        imageView = (ImageView)itemView.findViewById(R.id.homeListImg);
+        imageView = (ImageView)itemView.findViewById(R.id.ListImg);
     }
 }

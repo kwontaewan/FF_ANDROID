@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">follofellow</string>
+    <string name="app_name">FollowFellow</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -8,12 +8,11 @@
     <string name="category3">Message</string>
     <string name="category4">Likes</string>
 
-    <string name="list_item_1">List Item 1</string>
-    <string name="list_item_2">List Item 2</string>
-    <string name="list_item_3">List Item 3</string>
-    <string name="list_item_4">List Item 4</string>
-    <string name="list_item_5">List Item 5</string>
-    <string name="list_item_6">List Item 6</string>
+    <string name="list_item_1">Inbox</string>
+    <string name="list_item_2">Wish list</string>
+    <string name="list_item_3">Invite friends</string>
+    <string name="list_item_4">Help</string>
+    <string name="list_item_5">Setting</string>
     <string name="close_drawer">Close Drawer</string>
     <string name="open_drawer">Open Drawer</string>
 
