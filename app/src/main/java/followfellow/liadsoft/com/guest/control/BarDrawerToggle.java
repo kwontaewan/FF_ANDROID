@@ -10,7 +10,7 @@ import android.view.View;
 /**
  * Created by Gunter on 2016-01-11.
  */
-//네이게이션바 토글 이벤트 클래스
+    //네이게이션바 토글 이벤트 클래스
 public class BarDrawerToggle extends ActionBarDrawerToggle {
     public BarDrawerToggle(Activity activity, DrawerLayout drawerLayout, Toolbar toolbar, @StringRes int openDrawerContentDescRes, @StringRes int closeDrawerContentDescRes) {
         super(activity, drawerLayout, toolbar, openDrawerContentDescRes, closeDrawerContentDescRes);

@@ -41,6 +41,7 @@ public class MainFragment extends Fragment {
         linePageIndicator = (LinePageIndicator)rootView.findViewById(R.id.pageIndicator);
         initAutoViewPager();
         initRecycleView();
+        //viewPager Indicator setting
         linePageIndicator.setViewPager(viewPager);
         return rootView;
     }

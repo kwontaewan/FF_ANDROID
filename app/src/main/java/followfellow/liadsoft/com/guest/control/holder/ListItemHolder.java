@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import followfellow.liadsoft.com.R;
 
 /**
- * Created by user on 2016-01-12.
+ * Created by Gunter on 2016-01-12.
  */
 public class ListItemHolder extends RecyclerView.ViewHolder {
     public ImageView imageView;
