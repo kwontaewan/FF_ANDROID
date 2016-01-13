@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_data">
+        <item>Seoul</item>
+        <item>Daegu</item>
+        <item>Jeju</item>
+    </string-array>
+    <string-array name="dong_data">
+        <item>HongDae</item>
+        <item>Insadong</item>
+        <item>Gangnam</item>
+    </string-array>
+
+    <string-array name="language_data">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Japanese</item>
+        <item>French</item>
+        <item>Spanish</item>
+    </string-array>
+</resources>

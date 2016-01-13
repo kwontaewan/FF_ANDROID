@@ -28,7 +28,7 @@ public class MainFragment extends Fragment {
     private RecyclerViewHeader header;
     private HomeAutoViewPagerAdapter homeAutoViewPagerAdapter;
     private LinePageIndicator linePageIndicator;
-    AutoScrollViewPager viewPager;
+    private AutoScrollViewPager viewPager;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState)

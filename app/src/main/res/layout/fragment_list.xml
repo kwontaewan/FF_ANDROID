@@ -20,7 +20,6 @@
                 style="@style/FilterImageView"
                 />
             <ImageView
-                android:id="@+id/imgTest2"
                 style="@style/FilterImageView"
                 />
             <ImageView
@@ -31,7 +30,7 @@
 
         <include
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="230dp"
             layout="@layout/filter_view"/>
 
         <android.support.v7.widget.RecyclerView

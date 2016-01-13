@@ -7,10 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import followfellow.liadsoft.com.R;
+import followfellow.liadsoft.com.guest.control.ListFragmentOnclickListener;
 import followfellow.liadsoft.com.guest.control.adapter.ListRecyclerViewAdapter;
 import followfellow.liadsoft.com.guest.model.RecyclerViewItemData;
 
@@ -21,33 +25,36 @@ public class ListFragment extends Fragment {
     private RecyclerView.LayoutManager listLayoutManager;
     private RecyclerView listRecyclerView;
     private ListRecyclerViewAdapter listRecyclerViewAdapter;
+    private LinearLayout linearLayout;
     private ImageView imageTest;
-    private ImageView imageTest2;
+    private Button button;
+    private Spinner LocationSpinner;
+    private Spinner LocationSpinner2;
+    private Spinner LanguageSpinner;
+    private ArrayAdapter adapter;
+    private ArrayAdapter adapter2;
+    private ArrayAdapter adapter3;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState)
     {
         final View rootView = inflater.inflate(
                 R.layout.fragment_list, container, false);
-        listRecyclerView = (RecyclerView)rootView.findViewById(R.id.list_recycle_view);
-        ///<---                         고쳐야되는 부분                     ----->///
-        imageTest = (ImageView)rootView.findViewById(R.id.imgTest);
-        imageTest2 = (ImageView)rootView.findViewById(R.id.imgTest2);
-        final LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.downView);
 
-        imageTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                linearLayout.setVisibility(View.VISIBLE);
-            }
-        });
-        imageTest2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                linearLayout.setVisibility(View.GONE);
-            }
-        });
-        ///<---                         고쳐야되는 부분                     ----->///
+        listRecyclerView = (RecyclerView)rootView.findViewById(R.id.list_recycle_view);
+        LocationSpinner = (Spinner)rootView.findViewById(R.id.Locating_spinner);
+        LocationSpinner2 = (Spinner)rootView.findViewById(R.id.Locating_spinner2);
+        LanguageSpinner = (Spinner)rootView.findViewById(R.id.Language_spinner);
+        imageTest = (ImageView)rootView.findViewById(R.id.imgTest);
+        button = (Button)rootView.findViewById(R.id.search_button);
+        linearLayout = (LinearLayout)rootView.findViewById(R.id.downView);
+
+        //event
+        imageTest.setOnClickListener(new ListFragmentOnclickListener(linearLayout));
+        button.setOnClickListener(new ListFragmentOnclickListener(linearLayout));
+
+
+        initSpinner();
         initRecycleView();
         return rootView;
     }
@@ -56,6 +63,21 @@ public class ListFragment extends Fragment {
         listRecyclerView.setLayoutManager(listLayoutManager);
         listRecyclerViewAdapter = new ListRecyclerViewAdapter(getActivity().getBaseContext(), RecyclerViewItemData.getAllListItemList());
         listRecyclerView.setAdapter(listRecyclerViewAdapter);
+    }
+
+    private void initSpinner(){
+        //Location 1 init
+        adapter = ArrayAdapter.createFromResource(getActivity().getBaseContext(),R.array.city_data,R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        LocationSpinner.setAdapter(adapter);
+        //Location 2 init
+        adapter2 = ArrayAdapter.createFromResource(getActivity().getBaseContext(),R.array.dong_data,R.layout.support_simple_spinner_dropdown_item);
+        adapter2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        LocationSpinner2.setAdapter(adapter2);
+        //Language init
+        adapter3 = ArrayAdapter.createFromResource(getActivity().getBaseContext(),R.array.language_data,R.layout.support_simple_spinner_dropdown_item);
+        adapter3.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        LanguageSpinner.setAdapter(adapter3);
     }
 
 
