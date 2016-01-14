@@ -15,7 +15,7 @@ import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.adapter.HomeAutoViewPagerAdapter;
 import followfellow.liadsoft.com.guest.control.adapter.HomeRecyclerViewAdapter;
-import followfellow.liadsoft.com.guest.model.HomeAutoViewPagerData;
+import followfellow.liadsoft.com.guest.model.ViewPagerData;
 import followfellow.liadsoft.com.guest.model.RecyclerViewItemData;
 
 /**
@@ -46,7 +46,7 @@ public class MainFragment extends Fragment {
         return rootView;
     }
     private void initAutoViewPager(){
-        homeAutoViewPagerAdapter = new HomeAutoViewPagerAdapter(getActivity().getBaseContext(), HomeAutoViewPagerData.getAllPagerItem());
+        homeAutoViewPagerAdapter = new HomeAutoViewPagerAdapter(getActivity().getBaseContext(), ViewPagerData.getAllHomePagerItem());
         viewPager.setAdapter(homeAutoViewPagerAdapter);
         viewPager.setInterval(2000);
         viewPager.startAutoScroll();

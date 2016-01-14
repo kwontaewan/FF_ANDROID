@@ -32,6 +32,8 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeItemHolder
     @Override
     public void onBindViewHolder(HomeItemHolder holder, int position) {
         holder.imageView.setImageResource(itemList.get(position));
+        holder.itemView.setOnClickListener(new HomeRecylerOnClickListener(context));
+
     }
 
     @Override
