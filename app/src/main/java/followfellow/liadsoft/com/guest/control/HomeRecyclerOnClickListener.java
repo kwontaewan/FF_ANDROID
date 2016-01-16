@@ -9,10 +9,10 @@ import followfellow.liadsoft.com.guest.view.activity.TourDetailsActivity;
 /**
  * Created by user on 2016-01-14.
  */
-public class HomeRecylerOnClickListener implements View.OnClickListener {
+public class HomeRecyclerOnClickListener implements View.OnClickListener {
     private Context context;
 
-    public HomeRecylerOnClickListener(Context context) {
+    public HomeRecyclerOnClickListener(Context context) {
         this.context = context;
     }
 

@@ -17,8 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".guest.view.activity.TourDetailsActivity">
-
         </activity>
+        <activity android:name=".guest.view.activity.HostProfileActivity"/>
     </application>
 
 </manifest>

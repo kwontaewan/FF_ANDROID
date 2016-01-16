@@ -30,5 +30,6 @@ dependencies {
         exclude module: 'support-v4'
     }
     compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
 
 }

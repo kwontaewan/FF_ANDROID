@@ -3,10 +3,19 @@ package followfellow.liadsoft.com.guest.view.activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.ScrollView;
 
 import com.viewpagerindicator.LinePageIndicator;
 
 import followfellow.liadsoft.com.R;
+import followfellow.liadsoft.com.guest.control.TourDetailsOnclickListener;
+import followfellow.liadsoft.com.guest.control.adapter.ReviewRecyclerViewAdapter;
 import followfellow.liadsoft.com.guest.control.adapter.TourDetailsViewPagerAdapter;
 import followfellow.liadsoft.com.guest.model.ViewPagerData;
 
@@ -17,11 +26,31 @@ public class TourDetailsActivity extends AppCompatActivity {
     private ViewPager pager;
     private TourDetailsViewPagerAdapter tourDetailsViewPagerAdapter;
     private LinePageIndicator linePageIndicator;
+    private ImageView ratingListButton;
+    private LinearLayout linearLayout;
+    private RecyclerView.LayoutManager reviewLayoutManger;
+    private RecyclerView reviewRecyclerView;
+    private ReviewRecyclerViewAdapter reviewRecyclerViewAdapter;
+    private ScrollView scrollView;
+    private RatingBar ratingBar;
+    private Button hostProfileButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ativity_tourdetails);
+        setContentView(R.layout.activity_tourdetails);
         linePageIndicator = (LinePageIndicator)findViewById(R.id.pageIndicator);
+        ratingListButton = (ImageView)findViewById(R.id.rating_list_all);
+        linearLayout = (LinearLayout)findViewById(R.id.review_list);
+        reviewRecyclerView = (RecyclerView)findViewById(R.id.review_recycler_view);
+        scrollView = (ScrollView)findViewById(R.id.scrollView);
+        ratingBar = (RatingBar)findViewById(R.id.rating_bar);
+        hostProfileButton = (Button)findViewById(R.id.host_button);
+        hostProfileButton.setOnClickListener(new TourDetailsOnclickListener(this));
+        ratingBar.setStepSize((float)0.5);
+        ratingBar.setRating((float)0);
+        ratingBar.setIsIndicator(false);
+        ratingListButton.setOnClickListener(new TourDetailsOnclickListener(linearLayout,scrollView));
+        initRecycleView();
         initViewPager();
     }
 
@@ -30,7 +59,12 @@ public class TourDetailsActivity extends AppCompatActivity {
         tourDetailsViewPagerAdapter = new TourDetailsViewPagerAdapter(this, ViewPagerData.getAllTourDetailsPagerItem());
         pager.setAdapter(tourDetailsViewPagerAdapter);
         linePageIndicator.setViewPager(pager);
-
+    }
+    private void initRecycleView(){
+        reviewLayoutManger = new LinearLayoutManager(getApplicationContext());
+        reviewRecyclerView.setLayoutManager(reviewLayoutManger);
+        reviewRecyclerViewAdapter = new ReviewRecyclerViewAdapter(getApplicationContext());
+        reviewRecyclerView.setAdapter(reviewRecyclerViewAdapter);
     }
 
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -178,7 +180,78 @@
                 android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/primary">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Reviews"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
 
+            <ImageView
+                android:id="@+id/rating_list_all"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="263dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_action_new"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary">
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/rating_img"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/add"
+                app:siBorderWidth="8dp"
+                app:siBorderColor="@color/primary"
+                android:scaleType="fitXY"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@id/rating_img"
+                android:layout_centerInParent="true">
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:maxLines="3"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="write"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            layout="@layout/review_list"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4B70DF"
+            android:text="@string/Book_Now"
+            android:textColor="@color/white"/>
     </LinearLayout>
-
 </ScrollView>

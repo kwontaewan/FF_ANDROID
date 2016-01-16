@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.guest.control.HomeRecylerOnClickListener;
+import followfellow.liadsoft.com.guest.control.HomeRecyclerOnClickListener;
 import followfellow.liadsoft.com.guest.control.holder.HomeItemHolder;
 
 /**
@@ -33,7 +33,7 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeItemHolder
     @Override
     public void onBindViewHolder(HomeItemHolder holder, int position) {
         holder.imageView.setImageResource(itemList.get(position));
-        holder.itemView.setOnClickListener(new HomeRecylerOnClickListener(context));
+        holder.itemView.setOnClickListener(new HomeRecyclerOnClickListener(context));
 
     }
 

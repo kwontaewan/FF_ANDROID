@@ -13,7 +13,7 @@ import followfellow.liadsoft.com.R;
 //RecyclerView listitem
 public class HomeItemHolder extends RecyclerView.ViewHolder {
     public ImageView imageView;
-    private final Context context;
+    public Context context;
     public HomeItemHolder(View itemView){
         super(itemView);
         context = itemView.getContext();
