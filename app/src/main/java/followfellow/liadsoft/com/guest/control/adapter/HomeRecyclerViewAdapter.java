@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import followfellow.liadsoft.com.R;
+import followfellow.liadsoft.com.guest.control.HomeRecylerOnClickListener;
 import followfellow.liadsoft.com.guest.control.holder.HomeItemHolder;
 
 /**

@@ -24,6 +24,161 @@
                 android:layout_centerHorizontal="true"/>    
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:background="@color/primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:text="Main Title"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:text="sub Title"/>
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="~~~~~~"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Tour_Route"
+            android:textColor="@color/primary"
+            android:textSize="20dp"/>
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/This_Tour_Include"
+            android:textColor="@color/primary"
+            android:textSize="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add"/>
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add"/>
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add"/>
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/primary"
+            android:text="@string/Host"/>
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/add"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/name_Text"
+                android:layout_toStartOf="@+id/name_Text" />
+
+            <TextView
+                android:id="@+id/name_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Gunter"
+                android:layout_marginLeft="10dp"
+                android:layout_alignTop="@+id/profile_img"
+                android:layout_alignLeft="@+id/host_button"
+                android:layout_alignStart="@+id/host_button" />
+            <TextView
+                android:id="@+id/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hongdae, Seoul, South Korea"
+                android:layout_below="@+id/name_Text"
+                android:layout_alignLeft="@+id/name_Text"
+                android:layout_alignStart="@+id/name_Text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="introduce"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/area_text"
+                android:layout_alignLeft="@+id/area_text"
+                android:layout_alignStart="@+id/area_text" />
+
+            <Button
+                android:id="@+id/host_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="@string/Host_Page"
+                android:textColor="@color/white"
+                android:layout_below="@+id/profile_img"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
     </LinearLayout>
 
 </ScrollView>

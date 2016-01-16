@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">FollowFellow</string>
-
+    <!--main-->
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="category1">Main</string>
     <string name="category2">List</string>
     <string name="category3">Message</string>
     <string name="category4">Likes</string>
-
+    <!--main navigation-->
     <string name="list_item_1">Inbox</string>
     <string name="list_item_2">Wish list</string>
     <string name="list_item_3">Invite friends</string>
@@ -15,6 +15,10 @@
     <string name="list_item_5">Setting</string>
     <string name="close_drawer">Close Drawer</string>
     <string name="open_drawer">Open Drawer</string>
-
+    <!--Tour Detail-->
+    <string name="Tour_Route">Tour Route</string>
+    <string name="This_Tour_Include">This Tour Includes</string>
+    <string name="Host">Host</string>
+    <string name="Host_Page">Host Page</string>
 
 </resources>

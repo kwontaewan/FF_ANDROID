@@ -1,4 +1,4 @@
-package followfellow.liadsoft.com.guest.control.adapter;
+package followfellow.liadsoft.com.guest.control;
 
 import android.content.Context;
 import android.content.Intent;
