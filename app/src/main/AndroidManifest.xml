@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".guest.view.activity.TourDetailsActivity">
-        </activity>
+        <activity android:name=".guest.view.activity.TourDetailsActivity"/>
         <activity android:name=".guest.view.activity.HostProfileActivity"/>
+        <activity android:name=".guest.view.activity.TourBookingActivity"/>
     </application>
 
 </manifest>

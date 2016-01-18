@@ -18,7 +18,7 @@ public class ListFragmentOnclickListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.imgTest:
+            case R.id.filter_img_4:
                 linearLayout.setVisibility(View.VISIBLE);
                 break;
             case R.id.search_button:

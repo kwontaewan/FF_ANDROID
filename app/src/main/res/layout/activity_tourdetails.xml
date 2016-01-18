@@ -248,6 +248,7 @@
             android:layout_height="300dp"
             layout="@layout/review_list"/>
         <Button
+            android:id="@+id/book_now_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#4B70DF"

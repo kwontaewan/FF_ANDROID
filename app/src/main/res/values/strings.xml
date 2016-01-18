@@ -22,5 +22,7 @@
     <string name="Host_Page">Host Page</string>
     <string name="Reviews">Reviews</string>
     <string name="Book_Now">Book Now</string>
+    <!-- Host Profile-->
+    <string name="interested">I`m Interested in...</string>
 
 </resources>

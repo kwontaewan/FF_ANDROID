@@ -8,6 +8,7 @@ import android.widget.ScrollView;
 
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.view.activity.HostProfileActivity;
+import followfellow.liadsoft.com.guest.view.activity.TourBookingActivity;
 
 /**
  * Created by user on 2016-01-16.
@@ -49,6 +50,11 @@ public class TourDetailsOnclickListener implements View.OnClickListener {
                 Intent intent = new Intent(context, HostProfileActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
+                break;
+            case R.id.book_now_button:
+                Intent tourBooking = new Intent(context, TourBookingActivity.class);
+                tourBooking.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(tourBooking);
                 break;
 
         }

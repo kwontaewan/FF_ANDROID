@@ -14,16 +14,19 @@
             android:background="@color/primary">
 
             <ImageView
+                android:id="@+id/filter_img_1"
                 style="@style/FilterImageView"
                 />
             <ImageView
+                android:id="@+id/filter_img_2"
                 style="@style/FilterImageView"
                 />
             <ImageView
+                android:id="@+id/filter_img_3"
                 style="@style/FilterImageView"
                 />
             <ImageView
-                android:id="@+id/imgTest"
+                android:id="@+id/filter_img_4"
                 style="@style/FilterImageView"
                 />
         </LinearLayout>

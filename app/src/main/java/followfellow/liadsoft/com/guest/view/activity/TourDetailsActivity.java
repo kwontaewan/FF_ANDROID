@@ -34,6 +34,7 @@ public class TourDetailsActivity extends AppCompatActivity {
     private ScrollView scrollView;
     private RatingBar ratingBar;
     private Button hostProfileButton;
+    private Button bookNowButtom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +47,8 @@ public class TourDetailsActivity extends AppCompatActivity {
         ratingBar = (RatingBar)findViewById(R.id.rating_bar);
         hostProfileButton = (Button)findViewById(R.id.host_button);
         hostProfileButton.setOnClickListener(new TourDetailsOnclickListener(this));
+        bookNowButtom = (Button)findViewById(R.id.book_now_button);
+        bookNowButtom.setOnClickListener(new TourDetailsOnclickListener(this));
         ratingBar.setStepSize((float)0.5);
         ratingBar.setRating((float)0);
         ratingBar.setIsIndicator(false);

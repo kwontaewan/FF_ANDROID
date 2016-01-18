@@ -12,7 +12,7 @@
             android:scaleType="fitXY"
             android:src="@drawable/host_profile"/>
         <ImageView
-            android:id="@+id/cancel_action"
+            android:id="@+id/host_cancel_action"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentTop="true"
@@ -22,7 +22,7 @@
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:orientation="vertical"
         android:background="@color/darkYellow">
         <TextView
@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
             android:text="Gunter"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -43,4 +44,126 @@
             android:textSize="20dp"
             android:textColor="@color/white"/>
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="spanish"
+            android:id="@+id/textView"
+            android:textColor="@color/darkYellow"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/imageView2"
+            android:layout_alignStart="@+id/imageView2" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/add"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="English"
+            android:textColor="@color/darkYellow"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/add"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/add"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/imageView3"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Korean"
+            android:textColor="@color/darkYellow"
+            android:id="@+id/textView2"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageView"
+            android:layout_toStartOf="@+id/imageView"
+            android:layout_marginRight="38dp"
+            android:layout_marginEnd="38dp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"
+        android:textColor="@color/darkYellow"
+        android:text="@string/interested"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="55dp"
+            android:src="@drawable/add"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/add"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/add"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/add"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="blr blr brl"/>
 </LinearLayout>
