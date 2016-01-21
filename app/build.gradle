@@ -31,6 +31,6 @@ dependencies {
     }
     compile 'com.viewpagerindicator:library:2.4.1@aar'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
-    compile 'me.nlmartian.silkcal:library:0.1.1'
+    compile 'com.github.sundeepk:compact-calendar-view:1.8.1'
 
 }

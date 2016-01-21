@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -18,11 +19,63 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
-    <me.nlmartian.silkcal.DayPickerView
-        xmlns:calendar="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/calendar_view"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="@string/Choose_date"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:background="@color/primary"
-        calendar:drawRoundRect="false"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/primary">
+        <TextView
+            android:id="@+id/calender_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal" />
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="fill_parent"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_height="160dp"
+            app:compactCalendarTextSize="12sp"
+            app:compactCalendarBackgroundColor="@color/primary"
+            app:compactCalendarTextColor="#fff"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
+            app:compactCalendarCurrentDayBackgroundColor="#B71C1C"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:textSize="15dp"
+            android:text="@string/Message"/>
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:scrollHorizontally="true"
+            android:maxLines="3"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:text="@string/Send_Message"/>
+    </LinearLayout>
 </LinearLayout>
