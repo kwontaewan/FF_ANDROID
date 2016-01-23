@@ -3,7 +3,7 @@ package followfellow.liadsoft.com.guest.model;
 import followfellow.liadsoft.com.R;
 
 /**
- * Created by user on 2016-01-18.
+ * Created by Gunter on 2016-01-18.
  */
 public class ImgData {
 

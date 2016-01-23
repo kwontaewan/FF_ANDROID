@@ -19,6 +19,7 @@
         <activity android:name=".guest.view.activity.TourDetailsActivity"/>
         <activity android:name=".guest.view.activity.HostProfileActivity"/>
         <activity android:name=".guest.view.activity.TourBookingActivity"/>
+        <activity android:name=".host.view.activity.HostHomeActivity"/>
     </application>
 
 </manifest>

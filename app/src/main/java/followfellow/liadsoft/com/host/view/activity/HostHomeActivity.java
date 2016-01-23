@@ -1,4 +1,4 @@
-package followfellow.liadsoft.com.guest.view;
+package followfellow.liadsoft.com.host.view.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,19 +13,20 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.guest.control.BarDrawerToggle;
-import followfellow.liadsoft.com.guest.control.HomeActivityOnClickListener;
-import followfellow.liadsoft.com.guest.control.OnNavigationItemSelectedListener;
-import followfellow.liadsoft.com.guest.control.OnTabSelectedListener;
-import followfellow.liadsoft.com.guest.control.adapter.ViewPagerAdapter;
-import followfellow.liadsoft.com.guest.model.TabData;
+import followfellow.liadsoft.com.host.control.HostBarDrawerToggle;
+import followfellow.liadsoft.com.host.control.HostHomeActivityOnClickListener;
+import followfellow.liadsoft.com.host.control.HostOnNavigationItemSelectedListener;
+import followfellow.liadsoft.com.host.control.HostOnTabSelectedListener;
+import followfellow.liadsoft.com.host.control.adapter.HostHomeViewPagerAdapter;
+import followfellow.liadsoft.com.host.model.HostTabData;
 
-
-public class HomeActivity extends AppCompatActivity {
-
+/**
+ * Created by Gunter on 2016-01-22.
+ */
+public class HostHomeActivity extends AppCompatActivity {
     //View Pager Variables
     private ViewPager mViewPager;
-    private ViewPagerAdapter mViewPagerAdapter;
+    private HostHomeViewPagerAdapter mViewPagerAdapter;
 
     //Tab Layout Variables
     private TabLayout mTabLayout;
@@ -37,29 +38,29 @@ public class HomeActivity extends AppCompatActivity {
     private ActionBarDrawerToggle drawerToggle;
     private NavigationView navigationView;
 
-    private Button swHostMode;
+    private Button swGuestMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        swHostMode = (Button)findViewById(R.id.sw_host_mode);
-        swHostMode.setOnClickListener(new HomeActivityOnClickListener(this));
+        setContentView(R.layout.h_activity_main);
+        swGuestMode = (Button)findViewById(R.id.sw_guest_mode);
+        swGuestMode.setOnClickListener(new HostHomeActivityOnClickListener(this));
 
         //Initialising toolBar
-        toolbar = (Toolbar)findViewById(R.id.followfellow_toolbar);
+        toolbar = (Toolbar)findViewById(R.id.h_followfellow_toolbar);
         //Setting toolbar as Actionbar.
         setSupportActionBar(toolbar);
         //Initialising NavigationView
-        navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        navigationView = (NavigationView) findViewById(R.id.h_navigation_view);
         //Initialising DrawerLayout.
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout = (DrawerLayout) findViewById(R.id.h_drawer_layout);
         //Setting OnNavigationItemSelectedListener to the Navigation View.
         //This is used to perform specific action when an item is clicked.
-        navigationView.setNavigationItemSelectedListener(new OnNavigationItemSelectedListener(drawerLayout));
+        navigationView.setNavigationItemSelectedListener(new HostOnNavigationItemSelectedListener(drawerLayout));
 
         //Initialising ActionBarDrawerToggle and overriding its methods
-        drawerToggle = new BarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer);
+        drawerToggle = new HostBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer);
 
         //Finally setting up the guest_drawer listener for DrawerLayout
         drawerLayout.setDrawerListener(drawerToggle);
@@ -70,25 +71,25 @@ public class HomeActivity extends AppCompatActivity {
 
 
         //Add Tab Layout
-        mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        mTabLayout = (TabLayout) findViewById(R.id.h_tabLayout);
 
         //Add Tab Icon/
-        for(String tabText : TabData.getStringAll(getBaseContext()))
+        for(String tabText : HostTabData.getStringAll(getBaseContext()))
         {
             mTabLayout.addTab(mTabLayout.newTab().setText(tabText));
-       }
+        }
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //Fragment Adapter
-        mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),getBaseContext());
+        mViewPagerAdapter = new HostHomeViewPagerAdapter(getSupportFragmentManager(),getBaseContext());
 
         // Set View Pager
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = (ViewPager) findViewById(R.id.h_viewPager);
         mViewPager.setAdapter(mViewPagerAdapter);
 
         // Set Listener
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
-        mTabLayout.setOnTabSelectedListener(new OnTabSelectedListener(mViewPager));
+        mTabLayout.setOnTabSelectedListener(new HostOnTabSelectedListener(mViewPager));
 
     }
 

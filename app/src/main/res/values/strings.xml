@@ -7,6 +7,7 @@
     <string name="category2">List</string>
     <string name="category3">Message</string>
     <string name="category4">Likes</string>
+    <string name="sw_host">Switch to Fellow Mode</string>
     <!--main navigation-->
     <string name="list_item_1">Inbox</string>
     <string name="list_item_2">Wish list</string>
@@ -29,4 +30,10 @@
     <string name="Message">Message</string>
     <string name="Send_Message">Send Message</string>
 
+    <!--Host Main -->
+    <string name="h_category1">Pending</string>
+    <string name="h_category2">Calendar</string>
+    <string name="h_category3">Message</string>
+    <string name="h_category4">Register</string>
+    <string name="sw_guest">Switch to Follow Mode</string>
 </resources>
