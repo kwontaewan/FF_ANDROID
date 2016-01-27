@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import followfellow.liadsoft.com.R;
 
 /**
- * Created by user on 2016-01-22.
+ * Created by Gunter on 2016-01-22.
  */
 public class HostRegisterFragment extends Fragment {
     @Override

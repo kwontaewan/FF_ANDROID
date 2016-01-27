@@ -25,10 +25,11 @@ public class TourBookingActivity extends AppCompatActivity {
     private LinePageIndicator linePageIndicator;
     private SimpleDateFormat df;
     private TextView calendarText;
+    private CompactCalendarView compactCalendarView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tour_booking);
-        CompactCalendarView compactCalendarView = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
+        compactCalendarView = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
         df = new SimpleDateFormat("yyyy년MM월");
         calendarText = (TextView)findViewById(R.id.calender_text);
         compactCalendarView.drawSmallIndicatorForEvents(true);
