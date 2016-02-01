@@ -41,4 +41,5 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeItemHolder
     public int getItemCount() {
         return (itemList.size() >0)? itemList.size() : 0;
     }
+
 }

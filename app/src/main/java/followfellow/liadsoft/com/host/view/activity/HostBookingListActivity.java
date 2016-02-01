@@ -21,13 +21,14 @@ public class HostBookingListActivity extends AppCompatActivity {
     private HostBookingRecyclerAdapter hostBookingRecyclerAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.h_booking_list);
+        setContentView(R.layout.h_activity_booking_list);
 
         //Initialising toolBar
         toolbar = (Toolbar)findViewById(R.id.h_booking_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationIcon(R.drawable.ic_action_cancel);
+        toolbar.setTitle("");
         toolbar.setNavigationOnClickListener(new HostBookingListNavigationOnClickListener(this));
 
         bookingRecyclerView = (RecyclerView)findViewById(R.id.h_booking_recycler_view);

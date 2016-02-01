@@ -4,12 +4,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/button"
+    <ImageView
+        android:id="@+id/tour_img"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:id="@+id/delete_img"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/darkYellow"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_cancel"
+        />
 
 </RelativeLayout>
