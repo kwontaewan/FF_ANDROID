@@ -18,4 +18,10 @@
         <item>French</item>
         <item>Spanish</item>
     </string-array>
+
+    <string-array name="category_data">
+        <item>Location</item>
+        <item>Language</item>
+        <item>Transportation</item>
+    </string-array>
 </resources>

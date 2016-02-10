@@ -1,7 +1,6 @@
 package followfellow.liadsoft.com.host.control;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -17,7 +16,7 @@ import followfellow.liadsoft.com.host.model.HostRegisterTourTextData;
 import followfellow.liadsoft.com.util.ImageSelectHelper;
 
 /**
- * Created by user on 2016-01-30.
+ * Created by Gunter on 2016-01-30.
  */
 public class HostRegisterOnclickListener implements View.OnClickListener {
     private ImageSelectHelper imageSelectHelper;
@@ -74,7 +73,6 @@ public class HostRegisterOnclickListener implements View.OnClickListener {
                     Toast.makeText(context,"지울 사진이 없습니다.",Toast.LENGTH_LONG).show();
                 }
             case R.id.edit_button:
-                Log.d("Gunter","Gunter");
                 tourLayout.setVisibility(View.GONE);
                 editTourLayout.setVisibility(View.VISIBLE);
                 break;
