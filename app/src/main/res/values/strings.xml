@@ -9,11 +9,10 @@
     <string name="category4">Likes</string>
     <string name="sw_host">Switch to Fellow Mode</string>
     <!--main navigation-->
-    <string name="list_item_1">Inbox</string>
-    <string name="list_item_2">Wish list</string>
+    <string name="list_item_1">Account</string>
+    <string name="list_item_2">Setting</string>
     <string name="list_item_3">Invite friends</string>
     <string name="list_item_4">Help</string>
-    <string name="list_item_5">Setting</string>
     <string name="close_drawer">Close Drawer</string>
     <string name="open_drawer">Open Drawer</string>
     <!--Tour Detail-->
@@ -36,4 +35,9 @@
     <string name="h_category3">Message</string>
     <string name="h_category4">Register</string>
     <string name="sw_guest">Switch to Follow Mode</string>
+
+    <!--invite friend-->
+    <string name="invite_friend">Invite Friend</string>
+    <string name="Share_Link">Share Link</string>
+    <string name="username">username</string>
 </resources>

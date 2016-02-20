@@ -9,14 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
+
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.guest.control.ListFragmentOnclickListener;
 import followfellow.liadsoft.com.guest.control.adapter.ListRecyclerViewAdapter;
-import followfellow.liadsoft.com.guest.model.ImgData;
 import followfellow.liadsoft.com.guest.model.RecyclerViewItemData;
 
 /**
@@ -27,10 +26,6 @@ public class ListFragment extends Fragment {
     private RecyclerView listRecyclerView;
     private ListRecyclerViewAdapter listRecyclerViewAdapter;
     private LinearLayout linearLayout;
-    private ImageView filterImg1;
-    private ImageView filterImg2;
-    private ImageView filterImg3;
-    private ImageView filterImg4;
     private Button button;
     private Spinner LocationSpinner;
     private Spinner LocationSpinner2;
@@ -38,6 +33,7 @@ public class ListFragment extends Fragment {
     private ArrayAdapter adapter;
     private ArrayAdapter adapter2;
     private ArrayAdapter adapter3;
+    private RecyclerViewHeader header;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState)
@@ -49,24 +45,11 @@ public class ListFragment extends Fragment {
         LocationSpinner = (Spinner)rootView.findViewById(R.id.Locating_spinner);
         LocationSpinner2 = (Spinner)rootView.findViewById(R.id.Locating_spinner2);
         LanguageSpinner = (Spinner)rootView.findViewById(R.id.Language_spinner);
-        filterImg1 = (ImageView)rootView.findViewById(R.id.filter_img_1);
-        filterImg2 = (ImageView)rootView.findViewById(R.id.filter_img_2);
-        filterImg3 = (ImageView)rootView.findViewById(R.id.filter_img_3);
-        filterImg4= (ImageView)rootView.findViewById(R.id.filter_img_4);
         button = (Button)rootView.findViewById(R.id.search_button);
         linearLayout = (LinearLayout)rootView.findViewById(R.id.downView);
-
-        //filter img setting
-        filterImg1.setImageResource(ImgData.filterImgData()); filterImg2.setImageResource(ImgData.filterImgData());
-        filterImg3.setImageResource(ImgData.filterImgData()); filterImg4.setImageResource(ImgData.filterImgData());
-
-        //event
-        filterImg4.setOnClickListener(new ListFragmentOnclickListener(linearLayout));
-        button.setOnClickListener(new ListFragmentOnclickListener(linearLayout));
-
-
-        initSpinner();
+        header = (RecyclerViewHeader)rootView.findViewById(R.id.list_recycle_view_header);
         initRecycleView();
+        initSpinner();
         return rootView;
     }
     private void initRecycleView(){
@@ -74,6 +57,8 @@ public class ListFragment extends Fragment {
         listRecyclerView.setLayoutManager(listLayoutManager);
         listRecyclerViewAdapter = new ListRecyclerViewAdapter(getActivity().getBaseContext(), RecyclerViewItemData.getAllListItemList());
         listRecyclerView.setAdapter(listRecyclerViewAdapter);
+        header.attachTo(listRecyclerView,true);
+
     }
 
     private void initSpinner(){

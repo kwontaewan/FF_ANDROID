@@ -11,9 +11,6 @@
         <item android:id="@+id/list_item_3"
               android:title="@string/list_item_4"
               android:icon="@drawable/ic_action_help"/>
-        <item android:id="@+id/list_item_4"
-              android:title="@string/list_item_5"
-              android:icon="@drawable/ic_action_setting"/>
     </group>
 
 </menu>

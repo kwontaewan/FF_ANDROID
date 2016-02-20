@@ -29,13 +29,13 @@
             app:tabIndicatorColor="@android:color/white"
             app:tabIndicatorHeight="4dp"
             />
-        <android.support.v4.view.ViewPager
+        <followfellow.liadsoft.com.util.DoNotScrollViewPager
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/viewPager"
             android:layout_height="match_parent"
             android:layout_width="match_parent">
 
-        </android.support.v4.view.ViewPager>
+        </followfellow.liadsoft.com.util.DoNotScrollViewPager>
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

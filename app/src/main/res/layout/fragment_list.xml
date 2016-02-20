@@ -3,44 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_recycle_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:background="@color/primary">
-
-            <ImageView
-                android:id="@+id/filter_img_1"
-                style="@style/FilterImageView"
-                />
-            <ImageView
-                android:id="@+id/filter_img_2"
-                style="@style/FilterImageView"
-                />
-            <ImageView
-                android:id="@+id/filter_img_3"
-                style="@style/FilterImageView"
-                />
-            <ImageView
-                android:id="@+id/filter_img_4"
-                style="@style/FilterImageView"
-                />
-        </LinearLayout>
-
+        android:clipToPadding="false"/>
+    <com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
+        android:id="@+id/list_recycle_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal|top">
         <include
             android:layout_width="match_parent"
-            android:layout_height="230dp"
-            layout="@layout/filter_view"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/list_recycle_view"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipToPadding="false"/>
-        </LinearLayout>
-
+            layout="@layout/filter_view"/>
+    </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>
 </FrameLayout>

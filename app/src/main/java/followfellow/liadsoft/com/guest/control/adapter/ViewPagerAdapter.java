@@ -48,4 +48,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return context.getResources().getInteger(R.integer.fragment_number);
     }
+
+
+
 }

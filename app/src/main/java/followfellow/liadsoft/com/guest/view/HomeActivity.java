@@ -3,10 +3,11 @@ package followfellow.liadsoft.com.guest.view;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,12 +20,13 @@ import followfellow.liadsoft.com.guest.control.OnNavigationItemSelectedListener;
 import followfellow.liadsoft.com.guest.control.OnTabSelectedListener;
 import followfellow.liadsoft.com.guest.control.adapter.ViewPagerAdapter;
 import followfellow.liadsoft.com.guest.model.TabData;
+import followfellow.liadsoft.com.util.DoNotScrollViewPager;
 
 
 public class HomeActivity extends AppCompatActivity {
 
     //View Pager Variables
-    private ViewPager mViewPager;
+    private DoNotScrollViewPager mViewPager;
     private ViewPagerAdapter mViewPagerAdapter;
 
     //Tab Layout Variables
@@ -38,6 +40,7 @@ public class HomeActivity extends AppCompatActivity {
     private NavigationView navigationView;
 
     private Button swHostMode;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         //Setting OnNavigationItemSelectedListener to the Navigation View.
         //This is used to perform specific action when an item is clicked.
-        navigationView.setNavigationItemSelectedListener(new OnNavigationItemSelectedListener(drawerLayout));
+        navigationView.setNavigationItemSelectedListener(new OnNavigationItemSelectedListener(drawerLayout,this));
 
         //Initialising ActionBarDrawerToggle and overriding its methods
         drawerToggle = new BarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer);
@@ -83,9 +86,9 @@ public class HomeActivity extends AppCompatActivity {
         mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),getBaseContext());
 
         // Set View Pager
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = (DoNotScrollViewPager) findViewById(R.id.viewPager);
         mViewPager.setAdapter(mViewPagerAdapter);
-
+        mViewPager.setPagingEnabled(false);
         // Set Listener
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.setOnTabSelectedListener(new OnTabSelectedListener(mViewPager));
@@ -96,6 +99,19 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return true;
     }
 
@@ -104,13 +120,7 @@ public class HomeActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 

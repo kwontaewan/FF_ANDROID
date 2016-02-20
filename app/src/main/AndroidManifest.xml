@@ -22,6 +22,7 @@
         <activity android:name=".host.view.activity.HostHomeActivity"/>
         <activity android:name=".host.view.activity.HostBookingListActivity"/>
         <activity android:name=".host.view.activity.HostRegisterActivity"/>
+        <activity android:name=".guest.view.activity.InviteFriendActivity"/>
     </application>
 
 </manifest>

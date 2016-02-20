@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/downView"
     android:layout_width="match_parent"
-    android:layout_height="230dp"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/primary"
-    android:visibility="gone">
+    >
 
     <LinearLayout
         android:layout_marginLeft="10dp"
@@ -49,36 +49,7 @@
             android:layout_height="wrap_content"
             />
     </LinearLayout>
-    <LinearLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="Meal"
-            android:layout_marginRight="73dp"
-            />
-        <RadioGroup
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left|center_vertical"
-                android:text="Yes"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left|center_vertical"
-                android:text="No"/>
-        </RadioGroup>
 
-    </LinearLayout>
 
     <LinearLayout
         android:layout_marginLeft="10dp"
@@ -117,7 +88,7 @@
     </LinearLayout>
     <Button
         android:id="@+id/search_button"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
