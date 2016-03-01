@@ -14,6 +14,8 @@ import android.widget.Spinner;
 
 import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.adapter.ListRecyclerViewAdapter;
 import followfellow.liadsoft.com.guest.model.RecyclerViewItemData;
@@ -23,31 +25,25 @@ import followfellow.liadsoft.com.guest.model.RecyclerViewItemData;
  */
 public class ListFragment extends Fragment {
     private RecyclerView.LayoutManager listLayoutManager;
-    private RecyclerView listRecyclerView;
     private ListRecyclerViewAdapter listRecyclerViewAdapter;
-    private LinearLayout linearLayout;
-    private Button button;
-    private Spinner LocationSpinner;
-    private Spinner LocationSpinner2;
-    private Spinner LanguageSpinner;
     private ArrayAdapter adapter;
     private ArrayAdapter adapter2;
     private ArrayAdapter adapter3;
-    private RecyclerViewHeader header;
+
+    @Bind(R.id.list_recycle_view) RecyclerView listRecyclerView;
+    @Bind(R.id.downView) LinearLayout linearLayout;
+    @Bind(R.id.search_button) Button button;
+    @Bind(R.id.Locating_spinner) Spinner LocationSpinner;
+    @Bind(R.id.Locating_spinner2) Spinner LocationSpinner2;
+    @Bind(R.id.Language_spinner) Spinner LanguageSpinner;
+    @Bind(R.id.list_recycle_view_header) RecyclerViewHeader header;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState)
     {
         final View rootView = inflater.inflate(
                 R.layout.fragment_list, container, false);
-
-        listRecyclerView = (RecyclerView)rootView.findViewById(R.id.list_recycle_view);
-        LocationSpinner = (Spinner)rootView.findViewById(R.id.Locating_spinner);
-        LocationSpinner2 = (Spinner)rootView.findViewById(R.id.Locating_spinner2);
-        LanguageSpinner = (Spinner)rootView.findViewById(R.id.Language_spinner);
-        button = (Button)rootView.findViewById(R.id.search_button);
-        linearLayout = (LinearLayout)rootView.findViewById(R.id.downView);
-        header = (RecyclerViewHeader)rootView.findViewById(R.id.list_recycle_view_header);
+        ButterKnife.bind(this,rootView);
         initRecycleView();
         initSpinner();
         return rootView;

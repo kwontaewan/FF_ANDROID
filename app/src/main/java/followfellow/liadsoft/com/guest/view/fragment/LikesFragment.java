@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 
 /**
@@ -17,7 +18,8 @@ public class LikesFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(
-                R.layout.fragment_likes, container, false);
+            R.layout.fragment_likes, container, false);
+        ButterKnife.bind(this,rootView);
         return rootView;
     }
 

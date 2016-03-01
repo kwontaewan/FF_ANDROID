@@ -9,36 +9,36 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
-import com.viewpagerindicator.LinePageIndicator;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.adapter.HomeAutoViewPagerAdapter;
 import followfellow.liadsoft.com.guest.control.adapter.HomeRecyclerViewAdapter;
-import followfellow.liadsoft.com.guest.model.ViewPagerData;
 import followfellow.liadsoft.com.guest.model.RecyclerViewItemData;
+import followfellow.liadsoft.com.guest.model.ViewPagerData;
+import me.relex.circleindicator.CircleIndicator;
 
 /**
  * Created by Fwang on 2015. 10. 31..
  */
 public class MainFragment extends Fragment {
     private RecyclerView.LayoutManager listLayoutManger;
-    private RecyclerView homeRecyclerView;
     private HomeRecyclerViewAdapter homeRecyclerViewAdapter;
-    private RecyclerViewHeader header;
     private HomeAutoViewPagerAdapter homeAutoViewPagerAdapter;
-    private LinePageIndicator linePageIndicator;
-    private AutoScrollViewPager viewPager;
+
+    @Bind(R.id.home_recycler_view) RecyclerView homeRecyclerView;
+    @Bind(R.id.header) RecyclerViewHeader header;
+    @Bind(R.id.pageIndicator) CircleIndicator linePageIndicator;
+    @Bind(R.id.autoViewPager) AutoScrollViewPager viewPager;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(
                 R.layout.fragment_main, container, false);
-        homeRecyclerView = (RecyclerView)rootView.findViewById(R.id.home_recycler_view);
-        header=(RecyclerViewHeader)rootView.findViewById(R.id.header);
-        viewPager = (AutoScrollViewPager)rootView.findViewById(R.id.autoViewPager);
-        linePageIndicator = (LinePageIndicator)rootView.findViewById(R.id.pageIndicator);
+        ButterKnife.bind(this,rootView);
         initAutoViewPager();
         initRecycleView();
         //viewPager Indicator setting
