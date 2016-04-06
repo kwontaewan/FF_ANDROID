@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
 
 import followfellow.liadsoft.com.R;
+import followfellow.liadsoft.com.guest.view.activity.GuestSettingActivity;
 import followfellow.liadsoft.com.guest.view.activity.InviteFriendActivity;
 
 
@@ -17,6 +18,7 @@ import followfellow.liadsoft.com.guest.view.activity.InviteFriendActivity;
 public class OnNavigationItemSelectedListener implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     Context context;
+    Intent intent;
     public OnNavigationItemSelectedListener(DrawerLayout drawerLayout, Context context) {
         this.drawerLayout = drawerLayout;
         this.context = context;
@@ -34,9 +36,12 @@ public class OnNavigationItemSelectedListener implements NavigationView.OnNaviga
             case R.id.list_item_1:
                 return true;
             case R.id.list_item_2:
+                intent = new Intent(context, GuestSettingActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
                 return true;
             case R.id.list_item_3:
-                Intent intent = new Intent(context, InviteFriendActivity.class);
+                intent = new Intent(context, InviteFriendActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             default:

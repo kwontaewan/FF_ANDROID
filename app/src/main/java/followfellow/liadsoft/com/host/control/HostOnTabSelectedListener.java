@@ -9,7 +9,7 @@ import android.support.v4.view.ViewPager;
  */
 public class HostOnTabSelectedListener implements TabLayout.OnTabSelectedListener {
     private ViewPager viewPager;
-    public HostOnTabSelectedListener(ViewPager viewPager)
+    public  HostOnTabSelectedListener(ViewPager viewPager)
     {
         this.viewPager = viewPager;
     }

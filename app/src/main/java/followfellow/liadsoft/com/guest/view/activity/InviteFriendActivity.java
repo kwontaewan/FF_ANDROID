@@ -16,5 +16,6 @@ public class InviteFriendActivity extends AppCompatActivity {
         setContentView(R.layout.activity_invite_friend);
         toolbar = (Toolbar)findViewById(R.id.h_invite_toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_action_back);
+
     }
 }

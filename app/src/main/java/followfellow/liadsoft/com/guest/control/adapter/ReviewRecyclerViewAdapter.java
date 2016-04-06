@@ -10,7 +10,7 @@ import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.holder.ReviewItemHolder;
 
 /**
- * Created by user on 2016-01-16.
+ * Created by Gunter on 2016-01-16.
  */
 public class ReviewRecyclerViewAdapter extends RecyclerView.Adapter<ReviewItemHolder> {
     private Context context;

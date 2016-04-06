@@ -33,5 +33,8 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:scaleType">fitXY</item>
     </style>
+    <style name="setBackgroundTheme" parent="android:Theme">
+        <item name="android:background">@color/primaryDark</item>
+    </style>
 
 </resources>

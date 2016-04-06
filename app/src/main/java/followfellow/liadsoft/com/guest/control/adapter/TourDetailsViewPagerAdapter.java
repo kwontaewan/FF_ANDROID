@@ -13,7 +13,7 @@ import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.TourDetailsPagerOnclickListener;
 
 /**
- * Created by user on 2016-01-14.
+ * Created by Gunter on 2016-01-14.
  */
 public class TourDetailsViewPagerAdapter extends PagerAdapter {
     private Context context;

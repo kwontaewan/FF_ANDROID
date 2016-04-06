@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="followfellow.liadsoft.com" >
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_con"
@@ -23,6 +24,9 @@
         <activity android:name=".host.view.activity.HostBookingListActivity"/>
         <activity android:name=".host.view.activity.HostRegisterActivity"/>
         <activity android:name=".guest.view.activity.InviteFriendActivity"/>
+        <activity android:name=".guest.view.activity.DestinationActivity"/>
+        <activity android:name=".guest.view.activity.GuestSettingActivity"/>
+        <activity android:name=".guest.view.activity.AlertSettingActivity"/>
     </application>
 
 </manifest>

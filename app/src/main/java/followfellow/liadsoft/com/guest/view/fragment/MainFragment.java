@@ -2,6 +2,7 @@ package followfellow.liadsoft.com.guest.view.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,7 +13,6 @@ import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.adapter.HomeAutoViewPagerAdapter;
 import followfellow.liadsoft.com.guest.control.adapter.HomeRecyclerViewAdapter;
@@ -31,7 +31,7 @@ public class MainFragment extends Fragment {
     @Bind(R.id.home_recycler_view) RecyclerView homeRecyclerView;
     @Bind(R.id.header) RecyclerViewHeader header;
     @Bind(R.id.pageIndicator) CircleIndicator linePageIndicator;
-    @Bind(R.id.autoViewPager) AutoScrollViewPager viewPager;
+    @Bind(R.id.viewPager) ViewPager viewPager;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState)
@@ -48,9 +48,6 @@ public class MainFragment extends Fragment {
     private void initAutoViewPager(){
         homeAutoViewPagerAdapter = new HomeAutoViewPagerAdapter(getActivity().getBaseContext(), ViewPagerData.getAllHomePagerItem());
         viewPager.setAdapter(homeAutoViewPagerAdapter);
-        viewPager.setInterval(2000);
-        viewPager.startAutoScroll();
-
     }
     private void initRecycleView(){
         listLayoutManger = new LinearLayoutManager(getActivity().getBaseContext());
@@ -60,16 +57,4 @@ public class MainFragment extends Fragment {
         header.attachTo(homeRecyclerView,true);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        //stop auto scroll when onPause
-        viewPager.stopAutoScroll();
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        //start auto scroll when onResume
-        viewPager.startAutoScroll();
-    }
 }

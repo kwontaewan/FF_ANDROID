@@ -11,7 +11,7 @@
             android:id="@+id/tour_booking_viewpager"
             android:layout_width="match_parent"
             android:layout_height="200dp"/>
-        <com.viewpagerindicator.LinePageIndicator
+        <me.relex.circleindicator.CircleIndicator
             android:id="@+id/pageIndicator"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
@@ -19,34 +19,25 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@color/primary">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:text="@string/Choose_date"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/primary">
-        <TextView
-            android:id="@+id/calender_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_gravity="center_horizontal" />
-        <com.github.sundeepk.compactcalendarview.CompactCalendarView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/compactcalendar_view"
-            android:layout_width="fill_parent"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp"
-            android:layout_height="160dp"
-            app:compactCalendarTextSize="12sp"
-            app:compactCalendarBackgroundColor="@color/primary"
-            app:compactCalendarTextColor="#fff"
-            app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
-            app:compactCalendarCurrentDayBackgroundColor="#B71C1C"/>
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="select your tour date"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/xml_border"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,6 +47,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/primary"
+            android:layout_marginTop="20dp"
             android:textSize="15dp"
             android:text="@string/Message"/>
         <EditText
@@ -68,14 +62,12 @@
             android:focusableInTouchMode="true"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
             android:background="@color/primary"
             android:textColor="@color/white"
             android:text="@string/Send_Message"/>
-    </LinearLayout>
 </LinearLayout>
+

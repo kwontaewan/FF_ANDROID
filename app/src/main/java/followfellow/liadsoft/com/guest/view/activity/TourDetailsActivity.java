@@ -11,21 +11,22 @@ import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.ScrollView;
 
-import com.viewpagerindicator.LinePageIndicator;
-
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.TourDetailsOnclickListener;
 import followfellow.liadsoft.com.guest.control.adapter.ReviewRecyclerViewAdapter;
 import followfellow.liadsoft.com.guest.control.adapter.TourDetailsViewPagerAdapter;
 import followfellow.liadsoft.com.guest.model.ViewPagerData;
+import me.relex.circleindicator.CircleIndicator;
 
 /**
  * Created by Gunter on 2016-01-14.
  */
 public class TourDetailsActivity extends AppCompatActivity {
-    private ViewPager pager;
+    @Bind(R.id.tour_details_viewpager) ViewPager pager;
     private TourDetailsViewPagerAdapter tourDetailsViewPagerAdapter;
-    private LinePageIndicator linePageIndicator;
+    private CircleIndicator circleIndicator;
     private ImageView ratingListButton;
     private LinearLayout linearLayout;
     private RecyclerView.LayoutManager reviewLayoutManger;
@@ -39,7 +40,8 @@ public class TourDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tourdetails);
-        linePageIndicator = (LinePageIndicator)findViewById(R.id.pageIndicator);
+        ButterKnife.bind(this);
+        circleIndicator = (CircleIndicator) findViewById(R.id.pageIndicator);
         ratingListButton = (ImageView)findViewById(R.id.rating_list_all);
         linearLayout = (LinearLayout)findViewById(R.id.review_list);
         reviewRecyclerView = (RecyclerView)findViewById(R.id.review_recycler_view);
@@ -58,10 +60,9 @@ public class TourDetailsActivity extends AppCompatActivity {
     }
 
     private void initViewPager(){
-        pager = (ViewPager)findViewById(R.id.tour_details_viewpager);
         tourDetailsViewPagerAdapter = new TourDetailsViewPagerAdapter(this, ViewPagerData.getAllTourDetailsPagerItem());
         pager.setAdapter(tourDetailsViewPagerAdapter);
-        linePageIndicator.setViewPager(pager);
+        circleIndicator.setViewPager(pager);
     }
     private void initRecycleView(){
         reviewLayoutManger = new LinearLayoutManager(getApplicationContext());
