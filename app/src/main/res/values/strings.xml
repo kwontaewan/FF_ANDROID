@@ -26,6 +26,8 @@
     <string name="Book_Now">Book Now</string>
     <!-- Host Profile-->
     <string name="interested">I`m Interested in...</string>
+    <string name="edit_button">Edit</string>
+    <string name="save_button">Save</string>
     <!--Booking-->
     <string name="Choose_date">Choose Date</string>
     <string name="Message">What do yo want to say to host</string>

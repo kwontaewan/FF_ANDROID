@@ -25,31 +25,23 @@ import me.relex.circleindicator.CircleIndicator;
  */
 public class TourDetailsActivity extends AppCompatActivity {
     @Bind(R.id.tour_details_viewpager) ViewPager pager;
+    @Bind(R.id.pageIndicator) CircleIndicator circleIndicator;
+    @Bind(R.id.rating_list_all) ImageView ratingListButton;
+    @Bind(R.id.review_list) LinearLayout linearLayout;
+    @Bind(R.id.review_recycler_view) RecyclerView reviewRecyclerView;
+    @Bind(R.id.scrollView) ScrollView scrollView;
+    @Bind(R.id.rating_bar) RatingBar ratingBar;
+    @Bind(R.id.host_button) Button hostProfileButton;
+    @Bind(R.id.book_now_button) Button bookNowButtom;
     private TourDetailsViewPagerAdapter tourDetailsViewPagerAdapter;
-    private CircleIndicator circleIndicator;
-    private ImageView ratingListButton;
-    private LinearLayout linearLayout;
     private RecyclerView.LayoutManager reviewLayoutManger;
-    private RecyclerView reviewRecyclerView;
     private ReviewRecyclerViewAdapter reviewRecyclerViewAdapter;
-    private ScrollView scrollView;
-    private RatingBar ratingBar;
-    private Button hostProfileButton;
-    private Button bookNowButtom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tourdetails);
         ButterKnife.bind(this);
-        circleIndicator = (CircleIndicator) findViewById(R.id.pageIndicator);
-        ratingListButton = (ImageView)findViewById(R.id.rating_list_all);
-        linearLayout = (LinearLayout)findViewById(R.id.review_list);
-        reviewRecyclerView = (RecyclerView)findViewById(R.id.review_recycler_view);
-        scrollView = (ScrollView)findViewById(R.id.scrollView);
-        ratingBar = (RatingBar)findViewById(R.id.rating_bar);
-        hostProfileButton = (Button)findViewById(R.id.host_button);
         hostProfileButton.setOnClickListener(new TourDetailsOnclickListener(this));
-        bookNowButtom = (Button)findViewById(R.id.book_now_button);
         bookNowButtom.setOnClickListener(new TourDetailsOnclickListener(this));
         ratingBar.setStepSize((float)0.5);
         ratingBar.setRating((float)0);

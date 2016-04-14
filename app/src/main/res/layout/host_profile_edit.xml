@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/hostProfileEditLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <EditText
+            android:id="@+id/hostNameEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@+id/hostLocationText"
+            android:layout_alignStart="@+id/hostLocationText" />
+        <EditText
+            android:id="@+id/hostLocationEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hostNameEdit"
+            android:layout_centerInParent="true"
+            android:text="Location"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/primaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <TextView
+            android:id="@+id/interest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interested"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/interestEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textStyle=""
+            android:layout_below="@id/interest1"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:id="@+id/interestEdit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textStyle=""
+            android:layout_below="@id/interestEdit"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:id="@+id/interestEdit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textStyle=""
+            android:layout_below="@id/interestEdit2"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <EditText
+            android:id="@+id/introduceTitleEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:text="title"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/introduceContentEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/introduceTitleEdit"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:text="content"
+            android:maxLines="3"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/saveButton"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/save_button"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

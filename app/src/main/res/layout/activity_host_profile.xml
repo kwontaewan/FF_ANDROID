@@ -1,169 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/primary"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/hostProfileToolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/CustomToolbar"/>
     <RelativeLayout
+        android:background="@color/primaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/profileImg"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/add"
+            app:siBorderWidth="3dp"
+            app:siBorderColor="@color/white"
+            android:scaleType="fitXY"
+            />
+    </RelativeLayout>
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/host_profile"/>
-        <ImageView
-            android:id="@+id/host_cancel_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_action_cancel"/>
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="vertical"
-        android:background="@color/darkYellow">
-        <TextView
-            android:id="@+id/host_name_text"
+        <include
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:text="Gunter"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="20dp"/>
-        <TextView
-            android:id="@+id/host_area_text"
+            layout="@layout/host_profile_text"/>
+        <include
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Seoul"
-            android:textSize="20dp"
-            android:textColor="@color/white"/>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="spanish"
-            android:id="@+id/textView"
-            android:textColor="@color/darkYellow"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/imageView2"
-            android:layout_alignStart="@+id/imageView2" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/add"
-            android:layout_gravity="center_horizontal"
-            android:layout_alignTop="@+id/imageView"
-            android:layout_toRightOf="@+id/imageView"
-            android:layout_toEndOf="@+id/imageView"
-            android:layout_marginLeft="31dp"
-            android:layout_marginStart="31dp"
-            android:id="@+id/imageView2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="English"
-            android:textColor="@color/darkYellow"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/add"
-            android:layout_gravity="center_horizontal"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/imageView" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/add"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/imageView3"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_alignStart="@+id/textView2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Korean"
-            android:textColor="@color/darkYellow"
-            android:id="@+id/textView2"
-            android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/imageView"
-            android:layout_toStartOf="@+id/imageView"
-            android:layout_marginRight="38dp"
-            android:layout_marginEnd="38dp" />
-    </RelativeLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="18dp"
-        android:textColor="@color/darkYellow"
-        android:text="@string/interested"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp">
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="55dp"
-            android:src="@drawable/add"
-            android:scaleType="fitXY"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/add"
-            android:scaleType="fitXY"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/add"
-            android:scaleType="fitXY"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/add"
-            android:scaleType="fitXY"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="blr blr brl"/>
+            layout="@layout/host_profile_edit"/>
+    </FrameLayout>
 </LinearLayout>
