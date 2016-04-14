@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.host.control.HostBarDrawerToggle;
 import followfellow.liadsoft.com.host.control.HostHomeActivityOnClickListener;
@@ -25,36 +27,29 @@ import followfellow.liadsoft.com.util.DoNotScrollViewPager;
  */
 public class HostHomeActivity extends AppCompatActivity {
     //View Pager Variables
-    private DoNotScrollViewPager mViewPager;
-    private HostHomeViewPagerAdapter mViewPagerAdapter;
+    @Bind(R.id.h_viewPager) DoNotScrollViewPager mViewPager;
 
     //Tab Layout Variables
-    private TabLayout mTabLayout;
+    @Bind(R.id.h_tabLayout) TabLayout mTabLayout;
 
     //Toolbar Variables
-    private Toolbar toolbar;
+    @Bind(R.id.h_followfellow_toolbar) Toolbar toolbar;
+    @Bind(R.id.h_drawer_layout) DrawerLayout drawerLayout;
+    @Bind(R.id.h_navigation_view) NavigationView navigationView;
+    @Bind(R.id.sw_guest_mode) Button swGuestMode;
 
-    private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
-    private NavigationView navigationView;
-
-    private Button swGuestMode;
-
+    private HostHomeViewPagerAdapter mViewPagerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.h_activity_main);
-        swGuestMode = (Button)findViewById(R.id.sw_guest_mode);
+        ButterKnife.bind(this);
         swGuestMode.setOnClickListener(new HostHomeActivityOnClickListener(this));
 
-        //Initialising toolBar
-        toolbar = (Toolbar)findViewById(R.id.h_followfellow_toolbar);
         //Setting toolbar as Actionbar.
         setSupportActionBar(toolbar);
-        //Initialising NavigationView
-        navigationView = (NavigationView) findViewById(R.id.h_navigation_view);
-        //Initialising DrawerLayout.
-        drawerLayout = (DrawerLayout) findViewById(R.id.h_drawer_layout);
+
         //Setting OnNavigationItemSelectedListener to the Navigation View.
         //This is used to perform specific action when an item is clicked.
         navigationView.setNavigationItemSelectedListener(new HostOnNavigationItemSelectedListener(drawerLayout));
@@ -69,10 +64,6 @@ public class HostHomeActivity extends AppCompatActivity {
         // with the guest_drawer when the guest_drawer is opened or closed.
         drawerToggle.syncState();
 
-
-        //Add Tab Layout
-        mTabLayout = (TabLayout) findViewById(R.id.h_tabLayout);
-
         //Add Tab Icon/
         for(String tabText : HostTabData.getStringAll(getBaseContext()))
         {
@@ -83,8 +74,6 @@ public class HostHomeActivity extends AppCompatActivity {
         //Fragment Adapter
         mViewPagerAdapter = new HostHomeViewPagerAdapter(getSupportFragmentManager(),getBaseContext());
 
-        // Set View Pager
-        mViewPager = (DoNotScrollViewPager) findViewById(R.id.h_viewPager);
         mViewPager.setAdapter(mViewPagerAdapter);
         mViewPager.setPagingEnabled(false);
 

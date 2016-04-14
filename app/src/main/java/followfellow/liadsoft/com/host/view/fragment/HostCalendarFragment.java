@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.host.control.adapter.HostCalendarRecyclerAdapter;
 
@@ -16,9 +18,9 @@ import followfellow.liadsoft.com.host.control.adapter.HostCalendarRecyclerAdapte
  * Created by Gunter on 2016-01-22.
  */
 public class HostCalendarFragment extends Fragment {
-    private CalendarView compactCalendarView;
+    @Bind(R.id.h_compactcalendar_view) CalendarView compactCalendarView;
+    @Bind(R.id.h_calender_recycler_view) RecyclerView calenderRecyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView calenderRecyclerView;
     private HostCalendarRecyclerAdapter hostCalendarRecyclerAdapter;
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -26,14 +28,9 @@ public class HostCalendarFragment extends Fragment {
     {
         View rootView = inflater.inflate(
                 R.layout.h_fragment_calendar, container, false);
+        ButterKnife.bind(this,rootView);
         //calendarText=(TextView)rootView.findViewById(R.id.h_calender_text);
         //calendarText.setText(today.get(Calendar.YEAR)+"년"+today.get(Calendar.MONTH)+1+"월");
-
-        //Initialising calendar
-        compactCalendarView = (CalendarView) rootView.findViewById(R.id.h_compactcalendar_view);
-
-        //Initialising RecyclerView
-        calenderRecyclerView = (RecyclerView)rootView.findViewById(R.id.h_calender_recycler_view);
         initRecyclerView();
         return rootView;
     }

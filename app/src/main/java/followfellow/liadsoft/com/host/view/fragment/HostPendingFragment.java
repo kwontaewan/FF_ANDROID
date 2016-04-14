@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.host.control.adapter.HostPendingRecyclerViewAdapter;
 import followfellow.liadsoft.com.host.model.HostRecyclerViewItemData;
@@ -16,8 +18,8 @@ import followfellow.liadsoft.com.host.model.HostRecyclerViewItemData;
  * Created by Gunter on 2016-01-22.
  */
 public class HostPendingFragment extends Fragment {
+    @Bind(R.id.h_pending_recycler_view) RecyclerView pendingRecyclerView;
     private RecyclerView.LayoutManager listLayoutManager;
-    private RecyclerView pendingRecyclerView;
     private HostPendingRecyclerViewAdapter pendingRecyclerViewAdapter;
 
     @Override
@@ -26,7 +28,7 @@ public class HostPendingFragment extends Fragment {
     {
         View rootView = inflater.inflate(
                 R.layout.h_fragment_pending, container, false);
-        pendingRecyclerView = (RecyclerView)rootView.findViewById(R.id.h_pending_recycler_view);
+        ButterKnife.bind(this,rootView);
         initRecyclerView();
         return rootView;
 

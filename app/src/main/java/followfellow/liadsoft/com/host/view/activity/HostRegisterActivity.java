@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.viewpagerindicator.LinePageIndicator;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.custom.CategoryIconDialog;
 import followfellow.liadsoft.com.host.control.HostRegisterOnclickListener;
@@ -23,47 +25,33 @@ import followfellow.liadsoft.com.util.ImageSelectHelper;
  * Created by Gunter on 2016-01-30.
  */
 public class HostRegisterActivity extends ImageSelectHelper {
-    private Toolbar toolbar;
-    private ViewPager viewPager;
-    private LinePageIndicator linePageIndicator;
-    private Button deleteButton;
-    private Button uploadButton;
-    private Button editButton;
-    private Button saveButton;
-    private TextView tourMainTitleText;
-    private TextView tourSubTitleText;
-    private TextView tourExplanationText;
-    private EditText tourMainTitleEdit;
-    private EditText tourSubTitleEdit;
-    private EditText tourExplanationEdit;
+    @Bind(R.id.h_register_toolbar) Toolbar toolbar;
+    @Bind(R.id.tour_image_viewpager) ViewPager viewPager;
+    @Bind(R.id.pageIndicator) LinePageIndicator linePageIndicator;
+    @Bind(R.id.delete_all_img_button) Button deleteButton;
+    @Bind(R.id.upload_img_button) Button uploadButton;
+    @Bind(R.id.edit_button) Button editButton;
+    @Bind(R.id.save_button) Button saveButton;
+    @Bind(R.id.tour_main_title_text) TextView tourMainTitleText;
+    @Bind(R.id.tour_sub_title_text) TextView tourSubTitleText;
+    @Bind(R.id.tour_explanation_text) TextView tourExplanationText;
+    @Bind(R.id.tour_main_title_edit) EditText tourMainTitleEdit;
+    @Bind(R.id.tour_sub_title_edit) EditText tourSubTitleEdit;
+    @Bind(R.id.tour_explanation_edit) EditText tourExplanationEdit;
     private RegisterViewpagerAdapter registerViewpagerAdapter;
-    private LinearLayout tourLayout;
-    private LinearLayout editTourLayout;
-    private ImageView tourIcon1;
+    @Bind(R.id.tourLayout) LinearLayout tourLayout;
+    @Bind(R.id.edit_tourLayout) LinearLayout editTourLayout;
+    @Bind(R.id.tour_include_img1) ImageView tourIcon1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.h_activity_register);
-        toolbar = (Toolbar)findViewById(R.id.h_register_toolbar);
+        ButterKnife.bind(this);
         toolbar.setNavigationIcon(R.drawable.ic_action_back);
-        deleteButton = (Button)findViewById(R.id.delete_all_img_button);
-        uploadButton = (Button)findViewById(R.id.upload_img_button);
-        linePageIndicator = (LinePageIndicator)findViewById(R.id.pageIndicator);
         registerViewpagerAdapter = new RegisterViewpagerAdapter(this, HostRegisterTourImgData.getBitmaps(),linePageIndicator);
         uploadButton.setOnClickListener(new HostRegisterOnclickListener(this));
         deleteButton.setOnClickListener(new HostRegisterOnclickListener(this,registerViewpagerAdapter,linePageIndicator));
         initPager();
-        tourLayout = (LinearLayout)findViewById(R.id.tourLayout);
-        editTourLayout = (LinearLayout)findViewById(R.id.edit_tourLayout);
-        editButton = (Button)findViewById(R.id.edit_button);
-        saveButton = (Button)findViewById(R.id.save_button);
-        tourMainTitleText = (TextView)findViewById(R.id.tour_main_title_text);
-        tourSubTitleText = (TextView)findViewById(R.id.tour_sub_title_text);
-        tourExplanationText = (TextView)findViewById(R.id.tour_explanation_text);
-        tourMainTitleEdit = (EditText)findViewById(R.id.tour_main_title_edit);
-        tourSubTitleEdit = (EditText)findViewById(R.id.tour_sub_title_edit);
-        tourExplanationEdit = (EditText)findViewById(R.id.tour_explanation_edit);
-        tourIcon1 = (ImageView)findViewById(R.id.tour_include_img1);
         editButton.setOnClickListener(new HostRegisterOnclickListener(editTourLayout,tourLayout));
         saveButton.setOnClickListener(new HostRegisterOnclickListener(tourMainTitleText,tourSubTitleText,tourExplanationText,tourMainTitleEdit,tourSubTitleEdit,tourExplanationEdit,tourLayout,editTourLayout));
         tourIcon1.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +66,6 @@ public class HostRegisterActivity extends ImageSelectHelper {
 
 
     private void initPager(){
-        viewPager = (ViewPager)findViewById(R.id.tour_image_viewpager);
         viewPager.setAdapter(registerViewpagerAdapter);
         linePageIndicator.setViewPager(viewPager);
     }

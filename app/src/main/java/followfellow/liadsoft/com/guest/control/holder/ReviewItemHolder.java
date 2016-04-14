@@ -1,6 +1,5 @@
 package followfellow.liadsoft.com.guest.control.holder;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RatingBar;
@@ -8,23 +7,20 @@ import android.widget.TextView;
 
 import com.github.siyamed.shapeimageview.CircularImageView;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 
 /**
  * Created by user on 2016-01-16.
  */
 public class ReviewItemHolder extends RecyclerView.ViewHolder {
-    public CircularImageView reviewImg;
-    public RatingBar ratingBar;
-    public TextView reviewText;
-    public TextView dateText;
-    public Context context;
+    @Bind(R.id.re_rating_img) public CircularImageView reviewImg;
+    @Bind(R.id.re_rating_bar) public RatingBar ratingBar;
+    @Bind(R.id.re_review_text) public TextView reviewText;
+    @Bind(R.id.re_review_date) public TextView dateText;
     public ReviewItemHolder(View itemView) {
         super(itemView);
-        context = itemView.getContext();
-        reviewImg = (CircularImageView)itemView.findViewById(R.id.re_rating_img);
-        ratingBar = (RatingBar)itemView.findViewById(R.id.re_rating_bar);
-        reviewText = (TextView)itemView.findViewById(R.id.re_review_text);
-        dateText = (TextView)itemView.findViewById(R.id.re_review_date);
+        ButterKnife.bind(this,itemView);
     }
 }
