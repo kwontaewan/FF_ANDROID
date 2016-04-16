@@ -1,4 +1,4 @@
-package followfellow.liadsoft.com.guest.view.activity;
+package followfellow.liadsoft.com.common;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -20,7 +20,7 @@ import followfellow.liadsoft.com.R;
 /**
  * Created by Gunter on 2016-01-16.
  */
-public class HostProfileActivity extends AppCompatActivity {
+public class GuestProfileActivity extends AppCompatActivity {
     @Bind(R.id.hostProfileToolbar) Toolbar toolbar;
     @Bind(R.id.profileImg) CircularImageView circularImageView;
     @Bind(R.id.hostProfileTextLayout) LinearLayout textLinearLayout;
@@ -43,7 +43,7 @@ public class HostProfileActivity extends AppCompatActivity {
     @Bind(R.id.saveButton) Button saveButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_host_profile);
+        setContentView(R.layout.activity_guest_profile);
         ButterKnife.bind(this);
         toolbar.setNavigationIcon(R.drawable.ic_action_back);
         toolbar.setTitle("Profile");

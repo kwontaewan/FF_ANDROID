@@ -1,4 +1,4 @@
-package followfellow.liadsoft.com.guest.view.activity;
+package followfellow.liadsoft.com.common;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -18,15 +18,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".guest.view.activity.TourDetailsActivity"/>
-        <activity android:name=".guest.view.activity.HostProfileActivity"/>
+        <activity android:name=".common.GuestProfileActivity"/>
         <activity android:name=".guest.view.activity.TourBookingActivity"/>
         <activity android:name=".host.view.activity.HostHomeActivity"/>
         <activity android:name=".host.view.activity.HostBookingListActivity"/>
         <activity android:name=".host.view.activity.HostRegisterActivity"/>
-        <activity android:name=".guest.view.activity.InviteFriendActivity"/>
+        <activity android:name=".common.InviteFriendActivity"/>
         <activity android:name=".guest.view.activity.DestinationActivity"/>
-        <activity android:name=".guest.view.activity.GuestSettingActivity"/>
-        <activity android:name=".guest.view.activity.AlertSettingActivity"/>
+        <activity android:name=".common.GuestSettingActivity"/>
+        <activity android:name=".common.AlertSettingActivity"/>
     </application>
 
 </manifest>

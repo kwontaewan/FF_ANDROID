@@ -35,10 +35,10 @@
         <include
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            layout="@layout/host_profile_text"/>
+            layout="@layout/guest_profile_text"/>
         <include
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            layout="@layout/host_profile_edit"/>
+            layout="@layout/guest_profile_edit"/>
     </FrameLayout>
 </LinearLayout>

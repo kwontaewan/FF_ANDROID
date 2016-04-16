@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.guest.view.activity.GuestSettingActivity;
-import followfellow.liadsoft.com.guest.view.activity.InviteFriendActivity;
+import followfellow.liadsoft.com.common.GuestProfileActivity;
+import followfellow.liadsoft.com.common.GuestSettingActivity;
+import followfellow.liadsoft.com.common.InviteFriendActivity;
 
 
 /**
@@ -34,9 +36,13 @@ public class OnNavigationItemSelectedListener implements NavigationView.OnNaviga
         // and then performing relevant action.
         switch (menuItem.getItemId()) {
             case R.id.list_item_1:
+                intent  = new Intent(context, GuestProfileActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
                 return true;
             case R.id.list_item_2:
-                intent = new Intent(context, GuestSettingActivity.class);
+                Toast.makeText(context,"AAA",Toast.LENGTH_SHORT).show();
+                intent  = new Intent(context, GuestSettingActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
                 return true;
