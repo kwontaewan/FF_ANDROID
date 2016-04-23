@@ -11,9 +11,9 @@ public class RecyclerViewItemData {
     //HOME화면에 리사이클러뷰 list사진들을 뿌려주는 함수
     public static ArrayList<Integer> getAllHomeItemList(){
         ArrayList<Integer> allItems = new ArrayList<>();
-        allItems.add(R.drawable.testlist);
-        allItems.add(R.drawable.testlist);
-        allItems.add(R.drawable.testlist);
+        allItems.add(R.drawable.testpic);
+        allItems.add(R.drawable.testpic2);
+        allItems.add(R.drawable.testpic3);
         return allItems;
     }
 

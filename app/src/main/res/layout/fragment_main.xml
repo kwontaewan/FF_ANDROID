@@ -12,21 +12,23 @@
     <com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
         android:id="@+id/header"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="140.59dp"
         android:layout_gravity="center_horizontal|top">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/g_main_around_margin">
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="match_parent"
                 />
-            <me.relex.circleindicator.CircleIndicator
+            <com.viewpagerindicator.LinePageIndicator
                 android:id="@+id/pageIndicator"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 />

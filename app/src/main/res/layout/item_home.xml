@@ -3,8 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:layout_marginBottom="3dp"
+    android:layout_height="160.50dp"
+    android:layout_marginRight="@dimen/g_main_around_margin"
+    android:layout_marginLeft="@dimen/g_main_around_margin"
+    android:layout_marginBottom="@dimen/g_main_card_margin_bottom"
     card_view:contentPadding="0dp">
     <RelativeLayout
         android:id="@+id/backgrd"
@@ -16,6 +18,40 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/mainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Main title"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/g_card_text_horizontal_margin"
+            android:layout_marginBottom="@dimen/g_card_maintitle_vertical_margin"
+            android:layout_alignParentBottom="true"
+            />
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Sub title"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/g_card_text_horizontal_margin"
+            android:layout_marginBottom="@dimen/g_card_subtitle_vertical_margin"
+            android:layout_alignParentBottom="true"
+            />
+        <TextView
+            android:id="@+id/tourCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="20 tours"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/g_card_text_horizontal_margin"
+            android:layout_marginBottom="@dimen/g_card_subtitle_vertical_margin" />
     </RelativeLayout>
 
 
