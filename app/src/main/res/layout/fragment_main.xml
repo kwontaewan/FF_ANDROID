@@ -31,6 +31,9 @@
                 android:layout_marginBottom="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:selectedColor="@color/black"
+                app:unselectedColor="#B8A270"
                 />
         </RelativeLayout>
     </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>

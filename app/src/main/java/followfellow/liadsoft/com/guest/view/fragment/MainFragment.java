@@ -43,8 +43,8 @@ public class MainFragment extends Fragment {
         initRecycleView();
         //viewPager Indicator setting
         linePageIndicator.setViewPager(viewPager);
-        linePageIndicator.setLineWidth(70);
-        linePageIndicator.setScaleY(4);
+        linePageIndicator.setLineWidth(75);
+        linePageIndicator.setScaleY(3);
         return rootView;
     }
     private void initAutoViewPager(){

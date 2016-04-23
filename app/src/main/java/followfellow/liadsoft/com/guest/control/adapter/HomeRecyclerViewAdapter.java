@@ -1,6 +1,7 @@
 package followfellow.liadsoft.com.guest.control.adapter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,9 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeItemHolder
     @Override
     public void onBindViewHolder(HomeItemHolder holder, int position) {
         holder.imageView.setImageResource(itemList.get(position));
+        holder.mainTitle.setTypeface(Typeface.createFromAsset(context.getAssets(),"ArcaMajora_Heavy.otf"));
+        holder.subTitle.setTypeface(Typeface.createFromAsset(context.getAssets(),"MyriadPro_Light.otf"));
+        holder.tourCountText.setTypeface(Typeface.createFromAsset(context.getAssets(),"MyriadPro_Light.otf"));
         holder.itemView.setOnClickListener(new HomeRecyclerOnClickListener(context));
 
     }

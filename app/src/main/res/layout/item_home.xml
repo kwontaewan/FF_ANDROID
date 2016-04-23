@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="160.50dp"
+    android:orientation="vertical"
     android:layout_marginRight="@dimen/g_main_around_margin"
     android:layout_marginLeft="@dimen/g_main_around_margin"
-    android:layout_marginBottom="@dimen/g_main_card_margin_bottom"
-    card_view:contentPadding="0dp">
+    android:layout_marginBottom="@dimen/g_main_card_margin_bottom">
     <RelativeLayout
         android:id="@+id/backgrd"
         android:layout_width="match_parent"
@@ -26,6 +25,7 @@
             android:text="Main title"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:alpha="0.9"
             android:layout_marginLeft="@dimen/g_card_text_horizontal_margin"
             android:layout_marginBottom="@dimen/g_card_maintitle_vertical_margin"
             android:layout_alignParentBottom="true"
@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:textSize="16dp"
             android:text="Sub title"
+            android:alpha="0.9"
             android:textColor="@color/white"
             android:layout_marginLeft="@dimen/g_card_text_horizontal_margin"
             android:layout_marginBottom="@dimen/g_card_subtitle_vertical_margin"
@@ -48,6 +49,7 @@
             android:textSize="12dp"
             android:text="20 tours"
             android:textColor="@color/white"
+            android:alpha="0.9"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/g_card_text_horizontal_margin"
@@ -55,4 +57,4 @@
     </RelativeLayout>
 
 
-</android.support.v7.widget.CardView>
+</LinearLayout>
