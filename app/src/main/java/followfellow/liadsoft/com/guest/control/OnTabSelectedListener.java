@@ -16,11 +16,12 @@ public class OnTabSelectedListener implements TabLayout.OnTabSelectedListener {
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
         viewPager.setCurrentItem(tab.getPosition());
+        tab.getIcon().setAlpha(255);
     }
 
     @Override
     public void onTabUnselected(TabLayout.Tab tab) {
-
+        tab.getIcon().setAlpha(127);
     }
 
     @Override

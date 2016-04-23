@@ -5,6 +5,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,6 +26,7 @@ import me.relex.circleindicator.CircleIndicator;
  * Created by Gunter on 2016-01-14.
  */
 public class TourDetailsActivity extends AppCompatActivity {
+    @Bind(R.id.toolbar) Toolbar toolbar;
     @Bind(R.id.tour_details_viewpager) ViewPager pager;
     @Bind(R.id.pageIndicator) CircleIndicator circleIndicator;
     @Bind(R.id.rating_list_all) ImageView ratingListButton;
@@ -41,6 +44,15 @@ public class TourDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tourdetails);
         ButterKnife.bind(this);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Tour");
+        toolbar.setNavigationIcon(R.drawable.ic_action_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         hostProfileButton.setOnClickListener(new TourDetailsOnclickListener(this));
         bookNowButtom.setOnClickListener(new TourDetailsOnclickListener(this));
         ratingBar.setStepSize((float)0.5);

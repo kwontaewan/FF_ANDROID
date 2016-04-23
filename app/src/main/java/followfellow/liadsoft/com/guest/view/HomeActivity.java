@@ -50,6 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         //Setting toolbar as Actionbar.
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
         //Setting OnNavigationItemSelectedListener to the Navigation View.
         //This is used to perform specific action when an item is clicked.
         navigationView.setNavigationItemSelectedListener(new OnNavigationItemSelectedListener(drawerLayout,this));
@@ -62,12 +63,14 @@ public class HomeActivity extends AppCompatActivity {
         drawerToggle.syncState();
 
         //Add Tab Icon/
-        for(String tabText : TabData.getStringAll(getBaseContext()))
+        for(Integer tabImg : TabData.getDrawableAll(getBaseContext()))
         {
-            mTabLayout.addTab(mTabLayout.newTab().setText(tabText));
-       }
+            mTabLayout.addTab(mTabLayout.newTab().setIcon(tabImg));
+        }
+        for (int i=1;i<4;i++){
+            mTabLayout.getTabAt(i).getIcon().setAlpha(127);
+        }
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
         //Fragment Adapter
         mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),getBaseContext());
 
@@ -78,7 +81,23 @@ public class HomeActivity extends AppCompatActivity {
         // Set Listener
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.setOnTabSelectedListener(new OnTabSelectedListener(mViewPager));
+/*        mTabLayout.setOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager) {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                super.onTabSelected(tab);
+                Log.d("TabLayout","1 : "+tab.getPosition());
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                Log.d("TabLayout","2 : "+tab.getPosition());
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                Log.d("TabLayout","3 : "+tab.getPosition());
+            }
+        });*/
     }
     @Nullable @OnClick(R.id.sw_host_mode)
     void swithcingMode(){

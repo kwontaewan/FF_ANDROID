@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import followfellow.liadsoft.com.R;
@@ -30,11 +32,9 @@ public class HomeAutoViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
         View page = inflater.inflate(R.layout.home_autopage,null);
-
         ImageView imageView = (ImageView)page.findViewById(R.id.image);
-        imageView.setImageResource(pagerItems.get(position));
+        Picasso.with(context).load(pagerItems.get(position)).into(imageView);
         container.addView(page,0);
         return page;
     }

@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:minHeight="?attr/actionBarSize"
-            android:background="@color/primary"
+            android:background="@drawable/toolbar_background"
             android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/CustomToolbar"/>
         <android.support.design.widget.TabLayout
@@ -23,11 +23,11 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:minHeight="?attr/actionBarSize"
-            android:background="@color/primary"
+            android:background="@color/cyan"
             app:tabTextAppearance="@style/AppTheme.TextAppearance.Design.Tab"
             app:theme="@style/CustomToolbar"
-            app:tabIndicatorColor="@android:color/white"
-            app:tabIndicatorHeight="4dp"
+            app:tabIndicatorColor="@color/cyan"
+            app:tabIndicatorHeight="0dp"
             />
         <followfellow.liadsoft.com.util.DoNotScrollViewPager
             xmlns:android="http://schemas.android.com/apk/res/android"

@@ -7,10 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.guest.control.TourDetailsPagerOnclickListener;
 
 /**
  * Created by Gunter on 2016-01-14.
@@ -32,13 +33,10 @@ public class TourDetailsViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
         View page = inflater.inflate(R.layout.tour_details_viewpager_item,null);
-
         ImageView imageView = (ImageView)page.findViewById(R.id.image);
-        ImageView imageView2 = (ImageView)page.findViewById(R.id.cancel_action);
-        imageView2.setOnClickListener(new TourDetailsPagerOnclickListener(context));
-        imageView.setImageResource(pagerItems.get(position));
+        Picasso.with(context).load(pagerItems.get(position)).into(imageView);
+        //imageView.setImageResource(pagerItems.get(position));
         container.addView(page,0);
         return page;
     }

@@ -7,39 +7,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"/>
-    <ImageView
-        android:id="@+id/cancel_action"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/ic_action_cancel"/>
-    <TextView
-        android:id="@+id/theme_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/cancel_action"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:text="Theme 1"/>
-    <TextView
-        android:id="@+id/review_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@id/theme_text"
-        android:layout_toRightOf="@id/cancel_action"
-        android:textColor="@color/black"
-        android:text="25 review"/>
-    <TextView
-        android:id="@+id/star_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@id/review_text"
-        android:layout_toRightOf="@id/cancel_action"
-        android:textColor="@color/black"
-        android:text="4.3 ★"/>
 </RelativeLayout>

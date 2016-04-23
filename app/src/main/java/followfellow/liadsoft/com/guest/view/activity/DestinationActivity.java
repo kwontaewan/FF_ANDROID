@@ -3,6 +3,7 @@ package followfellow.liadsoft.com.guest.view.activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,6 +29,7 @@ public class DestinationActivity extends AppCompatActivity {
         listView.setAdapter(new DestinationListViewAdapter(getApplicationContext(),arrayGroup,arrayChild));
     }
     private void setArrayData(){
+        Toast.makeText(getApplicationContext(),"sss",Toast.LENGTH_SHORT).show();
         arrayGroup.add("Seoul");
         ArrayList<String> arraySeoul = new ArrayList<>();
         arraySeoul.add("Gangnam/Seocho");

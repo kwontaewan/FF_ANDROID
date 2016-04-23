@@ -1,12 +1,10 @@
 package followfellow.liadsoft.com.host.model;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 
 import java.util.ArrayList;
 
 import followfellow.liadsoft.com.R;
-import followfellow.liadsoft.com.util.ImageUtil;
 
 /**
  * Created by Fwang on 15. 11. 5..
@@ -23,7 +21,7 @@ public class HostTabData {
         return arrayList;
     }
     //Tab Icon
-    public static ArrayList<Drawable> getDrawableAll(Context context)
+/*    public static ArrayList<Drawable> getDrawableAll(Context context)
     {
         ArrayList<Drawable> arrayList = new ArrayList();
         float x_size = context.getResources().getDimension(R.dimen.category_icon_size__x);
@@ -33,5 +31,5 @@ public class HostTabData {
         arrayList.add(ImageUtil.resToDrawable(context, R.drawable.tab_icon_message,x_size,y_size));
         arrayList.add(ImageUtil.resToDrawable(context, R.drawable.tab_icon_cart,x_size,y_size));
         return arrayList;
-    }
+    }*/
 }
