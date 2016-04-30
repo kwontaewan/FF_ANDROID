@@ -25,13 +25,6 @@
                 android:id="@+id/tour_details_viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"/>
-            <me.relex.circleindicator.CircleIndicator
-                android:id="@+id/pageIndicator"
-                android:layout_height="48dp"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"/>    
         </RelativeLayout>
 
         <LinearLayout

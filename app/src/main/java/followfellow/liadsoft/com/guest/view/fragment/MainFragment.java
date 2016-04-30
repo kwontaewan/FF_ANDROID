@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
-import com.viewpagerindicator.LinePageIndicator;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,7 +30,7 @@ public class MainFragment extends Fragment {
 
     @Bind(R.id.home_recycler_view) RecyclerView homeRecyclerView;
     @Bind(R.id.header) RecyclerViewHeader header;
-    @Bind(R.id.pageIndicator) LinePageIndicator linePageIndicator;
+    @Bind(R.id.pageIndicator) CirclePageIndicator linePageIndicator;
     @Bind(R.id.viewPager) ViewPager viewPager;
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -43,8 +43,6 @@ public class MainFragment extends Fragment {
         initRecycleView();
         //viewPager Indicator setting
         linePageIndicator.setViewPager(viewPager);
-        linePageIndicator.setLineWidth(75);
-        linePageIndicator.setScaleY(3);
         return rootView;
     }
     private void initAutoViewPager(){

@@ -39,8 +39,7 @@ dependencies {
     compile 'com.android.support:cardview-v7:23.0.+'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
-    compile 'com.viewpagerindicator:library:2.4.1@aar' //둘중하나 지워야됨
-    compile 'me.relex:circleindicator:1.1.8@aar' //둘중하나 지워야됨
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar' //이거 지워야됨
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
 
 }

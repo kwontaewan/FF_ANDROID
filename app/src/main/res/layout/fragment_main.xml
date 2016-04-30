@@ -8,11 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
-        android:layout_marginTop="5dp"/>
+       />
     <com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
         android:id="@+id/header"
         android:layout_width="wrap_content"
-        android:layout_height="140.59dp"
+        android:layout_height="150dp"
         android:layout_gravity="center_horizontal|top">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -24,16 +24,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />
-            <com.viewpagerindicator.LinePageIndicator
+            <com.viewpagerindicator.CirclePageIndicator
                 android:id="@+id/pageIndicator"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="8dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                app:selectedColor="@color/black"
-                app:unselectedColor="#B8A270"
+                app:fillColor="@color/black"
+                app:pageColor="#B8A270"
+                app:radius="4dp"
                 />
         </RelativeLayout>
     </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>

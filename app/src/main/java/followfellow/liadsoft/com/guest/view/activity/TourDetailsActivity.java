@@ -20,7 +20,7 @@ import followfellow.liadsoft.com.guest.control.TourDetailsOnclickListener;
 import followfellow.liadsoft.com.guest.control.adapter.ReviewRecyclerViewAdapter;
 import followfellow.liadsoft.com.guest.control.adapter.TourDetailsViewPagerAdapter;
 import followfellow.liadsoft.com.guest.model.ViewPagerData;
-import me.relex.circleindicator.CircleIndicator;
+
 
 /**
  * Created by Gunter on 2016-01-14.
@@ -28,7 +28,7 @@ import me.relex.circleindicator.CircleIndicator;
 public class TourDetailsActivity extends AppCompatActivity {
     @Bind(R.id.toolbar) Toolbar toolbar;
     @Bind(R.id.tour_details_viewpager) ViewPager pager;
-    @Bind(R.id.pageIndicator) CircleIndicator circleIndicator;
+   // @Bind(R.id.pageIndicator) CircleIndicator circleIndicator;
     @Bind(R.id.rating_list_all) ImageView ratingListButton;
     @Bind(R.id.review_list) LinearLayout linearLayout;
     @Bind(R.id.review_recycler_view) RecyclerView reviewRecyclerView;
@@ -66,7 +66,7 @@ public class TourDetailsActivity extends AppCompatActivity {
     private void initViewPager(){
         tourDetailsViewPagerAdapter = new TourDetailsViewPagerAdapter(this, ViewPagerData.getAllTourDetailsPagerItem());
         pager.setAdapter(tourDetailsViewPagerAdapter);
-        circleIndicator.setViewPager(pager);
+       // circleIndicator.setViewPager(pager);
     }
     private void initRecycleView(){
         reviewLayoutManger = new LinearLayoutManager(getApplicationContext());

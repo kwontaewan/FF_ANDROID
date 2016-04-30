@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,13 +26,12 @@ import followfellow.liadsoft.com.guest.control.OnTabSelectedListener;
 import followfellow.liadsoft.com.guest.control.adapter.ViewPagerAdapter;
 import followfellow.liadsoft.com.guest.model.TabData;
 import followfellow.liadsoft.com.host.view.activity.HostHomeActivity;
-import followfellow.liadsoft.com.util.DoNotScrollViewPager;
 
 
 public class HomeActivity extends AppCompatActivity {
 
     //View Pager Variables
-    private DoNotScrollViewPager mViewPager;
+    private ViewPager mViewPager;
     private ViewPagerAdapter mViewPagerAdapter;
     private ActionBarDrawerToggle drawerToggle;
 
@@ -75,9 +75,8 @@ public class HomeActivity extends AppCompatActivity {
         mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),getBaseContext());
 
         // Set View Pager
-        mViewPager = (DoNotScrollViewPager) findViewById(R.id.viewPager);
+        mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mViewPager.setAdapter(mViewPagerAdapter);
-        mViewPager.setPagingEnabled(false);
         // Set Listener
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.setOnTabSelectedListener(new OnTabSelectedListener(mViewPager));

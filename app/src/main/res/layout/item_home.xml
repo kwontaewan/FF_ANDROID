@@ -10,12 +10,16 @@
     <RelativeLayout
         android:id="@+id/backgrd"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
         <ImageView
             android:id="@+id/homeListImg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gm_gradation"
             android:scaleType="fitXY"/>
         <TextView
             android:id="@+id/mainTitle"

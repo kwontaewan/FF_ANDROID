@@ -10,14 +10,13 @@ import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 import followfellow.liadsoft.com.guest.control.adapter.TourBookingViewPagerAdapter;
 import followfellow.liadsoft.com.guest.model.ViewPagerData;
-import me.relex.circleindicator.CircleIndicator;
 
 /**
  * Created by Gunter on 2016-01-18.
  */
 public class TourBookingActivity extends AppCompatActivity {
     @Bind(R.id.tour_booking_viewpager) ViewPager viewPager;
-    @Bind(R.id.pageIndicator) CircleIndicator linePageIndicator;
+    //@Bind(R.id.pageIndicator) CircleIndicator linePageIndicator;
     @Bind(R.id.selectDate) Button selectDateButton;
     @Bind(R.id.sendMessage) Button sendMessageButton;
     private TourBookingViewPagerAdapter tourBookingViewPagerAdapter;
@@ -30,7 +29,7 @@ public class TourBookingActivity extends AppCompatActivity {
     private void initPager(){
         tourBookingViewPagerAdapter = new TourBookingViewPagerAdapter(this, ViewPagerData.getAllTourDetailsPagerItem());
         viewPager.setAdapter(tourBookingViewPagerAdapter);
-        linePageIndicator.setViewPager(viewPager);
+       // linePageIndicator.setViewPager(viewPager);
     }
 
 }

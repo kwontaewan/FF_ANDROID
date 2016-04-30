@@ -11,13 +11,6 @@
             android:id="@+id/tour_booking_viewpager"
             android:layout_width="match_parent"
             android:layout_height="200dp"/>
-        <me.relex.circleindicator.CircleIndicator
-            android:id="@+id/pageIndicator"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="5dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"

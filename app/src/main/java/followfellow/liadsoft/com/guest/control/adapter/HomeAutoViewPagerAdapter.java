@@ -32,7 +32,7 @@ public class HomeAutoViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View page = inflater.inflate(R.layout.home_autopage,null);
+        View page = inflater.inflate(R.layout.home_viewpager_item,null);
         ImageView imageView = (ImageView)page.findViewById(R.id.image);
         Picasso.with(context).load(pagerItems.get(position)).into(imageView);
         container.addView(page,0);
