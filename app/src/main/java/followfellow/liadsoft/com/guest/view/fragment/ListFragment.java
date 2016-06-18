@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
@@ -27,8 +25,7 @@ public class ListFragment extends Fragment {
     private ListRecyclerViewAdapter listRecyclerViewAdapter;
 
     @Bind(R.id.list_recycle_view) RecyclerView listRecyclerView;
-    @Bind(R.id.list_recycle_view_header) RecyclerViewHeader header;
-    @Bind(R.id.filtering_button) Button button;
+    @Bind(R.id.filter_button) Button button;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState)
@@ -49,9 +46,8 @@ public class ListFragment extends Fragment {
     private void initRecycleView(){
         listLayoutManager = new LinearLayoutManager(getActivity().getBaseContext());
         listRecyclerView.setLayoutManager(listLayoutManager);
-        listRecyclerViewAdapter = new ListRecyclerViewAdapter(getActivity().getBaseContext(), RecyclerViewItemData.getAllListItemList());
+        listRecyclerViewAdapter = new ListRecyclerViewAdapter(getActivity().getBaseContext(), RecyclerViewItemData.getAllHomeItemList());
         listRecyclerView.setAdapter(listRecyclerViewAdapter);
-        header.attachTo(listRecyclerView,true);
 
     }
 
