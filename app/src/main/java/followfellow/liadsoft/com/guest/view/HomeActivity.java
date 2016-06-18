@@ -63,12 +63,13 @@ public class HomeActivity extends AppCompatActivity {
         drawerToggle.syncState();
 
         //Add Tab Icon/
-        for(Integer tabImg : TabData.getDrawableAll(getBaseContext()))
+        for(Integer tabImg : TabData.getDrawableAll())
         {
             mTabLayout.addTab(mTabLayout.newTab().setIcon(tabImg));
         }
         for (int i=1;i<4;i++){
-            mTabLayout.getTabAt(i).getIcon().setAlpha(127);
+            mTabLayout.getTabAt(i).setIcon(TabData.unTabgetDrawableAll().get(i));
+            //mTabLayout.getTabAt(i).getIcon().setAlpha(127);
         }
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         //Fragment Adapter

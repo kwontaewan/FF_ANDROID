@@ -21,15 +21,22 @@ public class TabData {
         return arrayList;
     }
     //Tab Icon
-    public static ArrayList<Integer> getDrawableAll(Context context)
+    public static ArrayList<Integer> getDrawableAll()
     {
         ArrayList<Integer> arrayList = new ArrayList();
-        float x_size = context.getResources().getDimension(R.dimen.category_icon_size__x);
-        float y_size = context.getResources().getDimension(R.dimen.category_icon_size_y);
         arrayList.add(R.drawable.gm_tab_home);
         arrayList.add(R.drawable.gm_tab_list);
         arrayList.add(R.drawable.gm_tab_message);
-        arrayList.add(R.drawable.gm_tab_like);
+        arrayList.add(R.drawable.gm_tab_history);
+        return arrayList;
+    }
+    public static ArrayList<Integer> unTabgetDrawableAll()
+    {
+        ArrayList<Integer> arrayList = new ArrayList();
+        arrayList.add(R.drawable.gm_un_tab_home);
+        arrayList.add(R.drawable.gm_un_tab_list);
+        arrayList.add(R.drawable.gm_un_tab_message);
+        arrayList.add(R.drawable.gm_un_tab_history);
         return arrayList;
     }
 }
