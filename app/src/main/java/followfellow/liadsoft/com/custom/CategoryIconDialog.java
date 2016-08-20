@@ -24,7 +24,6 @@ public class CategoryIconDialog extends Dialog{
     LinearLayout transportationIcons;
     public CategoryIconDialog(Context context) {
         super(context);
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.h_tour_icon_dialog);
         adapter = ArrayAdapter.createFromResource(context,R.array.category_data,R.layout.support_simple_spinner_dropdown_item);

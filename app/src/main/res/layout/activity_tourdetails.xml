@@ -184,12 +184,12 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="20dp"
                 android:layout_toRightOf="@id/rating_img"
-                android:layout_centerInParent="true">
+                android:layout_centerInParent="trueeo">
                 <RatingBar
                     android:id="@+id/rating_bar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="?android:attr/ratingBarStyleIndicator"
+                    style="?android:attr/ratingBarStyle"
                     />
                 <EditText
                     android:layout_width="200dp"

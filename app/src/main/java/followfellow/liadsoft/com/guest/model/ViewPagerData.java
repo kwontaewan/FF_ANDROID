@@ -11,9 +11,9 @@ public class ViewPagerData {
     //Home화면 viewpager data
    public static ArrayList<Integer> getAllHomePagerItem(){
        ArrayList<Integer> allItems = new ArrayList<>();
-       allItems.add(R.drawable.testpic);
-       allItems.add(R.drawable.testpic);
-       allItems.add(R.drawable.testpic);
+       allItems.add(R.drawable.gm_11b_12);
+       allItems.add(R.drawable.gm_11b_12);
+       allItems.add(R.drawable.gm_11b_12);
        return allItems;
     }
     //투어상세화면 viewpager data

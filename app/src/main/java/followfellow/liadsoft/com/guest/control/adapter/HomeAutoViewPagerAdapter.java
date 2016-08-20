@@ -11,6 +11,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import butterknife.ButterKnife;
 import followfellow.liadsoft.com.R;
 
 /**
@@ -33,7 +34,7 @@ public class HomeAutoViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View page = inflater.inflate(R.layout.home_viewpager_item,null);
-        ImageView imageView = (ImageView)page.findViewById(R.id.image);
+        ImageView imageView = ButterKnife.findById(page,R.id.image);
         Picasso.with(context).load(pagerItems.get(position)).into(imageView);
         container.addView(page,0);
         return page;
