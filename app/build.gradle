@@ -41,5 +41,4 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar' //이거 지워야됨
     compile 'com.viewpagerindicator:library:2.4.1@aar'
-
 }

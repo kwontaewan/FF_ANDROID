@@ -19,9 +19,9 @@ public class ViewPagerData {
     //투어상세화면 viewpager data
     public static ArrayList<Integer> getAllTourDetailsPagerItem(){
         ArrayList<Integer> allItems = new ArrayList<>();
-        allItems.add(R.drawable.busking1);
-        allItems.add(R.drawable.craft1);
-        allItems.add(R.drawable.hanok1);
+        allItems.add(R.drawable.testpic);
+        allItems.add(R.drawable.testpic2);
+        allItems.add(R.drawable.testpic3);
         return allItems;
     }
 }

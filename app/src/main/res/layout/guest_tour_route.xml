@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/cyan"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gm_timestamp"
+        android:layout_marginLeft="39.29dp"/>
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginLeft="68.22dp"
+        android:text="03:22 PM"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tourRouteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginLeft="140.17dp"
+        android:text="AAAAAAAAAAAAAAAAAAA"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tourRouteContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="9.33dp"
+        android:layout_below="@id/tourRouteTitle"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="140.17dp"
+        android:text="AAAAAAAAAAAAAAAAAAA"
+        android:textColor="@color/white"/>
+</RelativeLayout>

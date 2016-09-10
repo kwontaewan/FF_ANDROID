@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
@@ -34,8 +33,8 @@ public class TourDetailsActivity extends AppCompatActivity {
     @Bind(R.id.review_recycler_view) RecyclerView reviewRecyclerView;
     @Bind(R.id.scrollView) ScrollView scrollView;
     @Bind(R.id.rating_bar) RatingBar ratingBar;
-    @Bind(R.id.host_button) Button hostProfileButton;
-    @Bind(R.id.book_now_button) Button bookNowButtom;
+    @Bind(R.id.host_button) ImageView hostProfileButton;
+    @Bind(R.id.book_now_button) ImageView bookNowButtom;
     private TourDetailsViewPagerAdapter tourDetailsViewPagerAdapter;
     private RecyclerView.LayoutManager reviewLayoutManger;
     private ReviewRecyclerViewAdapter reviewRecyclerViewAdapter;
